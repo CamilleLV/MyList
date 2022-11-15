@@ -26,3 +26,27 @@ input[type=submit] {
     display: block;
     margin: auto;
 }
+
+li {
+    display: inline-block; 
+    margin-right: 10px;
+  }
+
+  a {
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+  }
+  
+  a:link {
+    color: black;
+  }
+  
+  a:hover {
+    border-bottom: 1px solid;
+    background: orange;;
+  }
+
+  header {
+    background-color: #D89E5A;
+  }
