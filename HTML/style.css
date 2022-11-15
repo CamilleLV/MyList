@@ -1,0 +1,28 @@
+#prenom {
+    margin-right: 1em;
+}
+
+h1 {
+    text-align: center;
+}
+
+* {
+    font-family: "Verdana", sans-serif;
+}
+
+#fieldset {
+    width: 600px;
+    height: 150px;
+    margin: auto;
+}
+
+#fieldsetOpt {
+    width: 600px;
+    height: 75px;
+    margin: auto;
+}
+
+input[type=submit] {
+    display: block;
+    margin: auto;
+}
