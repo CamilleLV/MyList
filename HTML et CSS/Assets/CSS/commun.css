@@ -29,7 +29,7 @@ li {
     
     a:hover {
       border-bottom: 1px solid;
-      background: orange;;
+      background: #D89E5A;;
     }
   
    #logoMyList {
@@ -52,7 +52,11 @@ li {
 
 footer {
     background-color: #7B562B;
-    margin-top: 70px;
-    padding-top: 5px;
-    padding-bottom: 1px;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-left: 2em;
+  }
+
+  body {
+    background-color: #FEFEE2;
   }
