@@ -29,21 +29,23 @@
         $recipes = $recipesStatement->fetchAll();
     ?>
     <?php
-        $titre = $_GET["titre"];
+        //j'utilise urlPage car il sont tous différent
+        //et en titre il y a deux fois "la vie est belle"
+        $urlPage = $_GET["urlPage"];
 
         foreach ($recipes as $recipe) {
-            if ($recipe["title"] == $titre){
-                echo '  <h2>'.$recipe["title"].'</h2>
-                        <p>'.$recipe["urlPage"].'</p>
-                        <p>'.$recipe["duree"].'</p>
+            if ($recipe["urlPage"] == $urlPage){
+                echo '  <h2>title :'.$recipe["title"].'</h2>
+                        <p>urlPage :'.$recipe["urlPage"].'</p>
+                        <p>duree :'.$recipe["duree"].'</p>
                         <div><img src='.$recipe["urlImg"].'></div>
-                        <p>'.$recipe["date"].'</p>
-                        <p>'.$recipe["realisateur"].'</p>
-                        <p>'.$recipe["cast/0"].'</p>
-                        <p>'.$recipe["cast/1"].'</p>
-                        <p>'.$recipe["cast/2"].'</p>
-                        <p>'.$recipe["synopsis"].'</p>
-                        <p>'.$recipe["note-spectateurs"].'</p>';
+                        <p>date :'.$recipe["date"].'</p>
+                        <p>réalisateur :'.$recipe["realisateur"].'</p>
+                        <p>cast/0 :'.$recipe["cast/0"].'</p>
+                        <p>cast/1 :'.$recipe["cast/1"].'</p>
+                        <p>cast/2 :'.$recipe["cast/2"].'</p>
+                        <p>synopsis :'.$recipe["synopsis"].'</p>
+                        <p>note-spectateur :'.$recipe["note-spectateurs"].'</p>';
             }
         }
     ?>

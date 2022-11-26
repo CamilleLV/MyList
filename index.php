@@ -29,20 +29,71 @@
             $recipesStatement->execute();
             $recipes = $recipesStatement->fetchAll();
         ?>
-            <section>
-            <h1>film</h1>
+        <section>
+            <h1>tout les films</h1>
             <ul class="carousel">
                 <?php
-                //On affiche chaque recette une à une
+                //On affiche chaque film un par un
                 foreach ($recipes as $recipe) {
                     echo '<li>
                             <h2>'.$recipe["title"].'</h2>
-                            <a href="oeuvre.php"><img src='.$recipe["urlImg"].' class="agrandir_oeuvre"></a>
+                            <a href="oeuvre.php?urlPage='.$recipe["urlPage"].'"><img src='.$recipe["urlImg"].' class="agrandir_oeuvre"></a>
                         </li>';
-
-                    /*echo '<p>'.$recipe['title'].'</p>';
-                    echo '<img src="'.$recipe['urlImg'].'">';
-                    echo "<br>";*/
+                }
+                ?>
+            </ul>
+        </section>
+        <section>
+            <h1>films avec une img</h1>
+            <ul class="carousel">
+                <?php
+                //On affiche chaque film un par un
+                foreach ($recipes as $recipe) {
+                    if ($recipe["urlImg"] !== "noImg.jpg"){
+                        echo '<li>
+                                <h2>'.$recipe["title"].'</h2>
+                                <a href="oeuvre.php?urlPage='.$recipe["urlPage"].'"><img src='.$recipe["urlImg"].' class="agrandir_oeuvre"></a>
+                            </li>';
+                    }
+                }
+                ?>
+            </ul>
+        </section>
+        <section>
+            <h1>films avec une note > ou = à 4,5</h1>
+            <ul class="carousel">
+                <?php
+                //On affiche chaque film un par un
+                foreach ($recipes as $recipe) {
+                    if ($recipe["note-spectateurs"] > "4,4"){
+                        echo '<li>
+                                <h2>'.$recipe["title"].'</h2>
+                                <a href="oeuvre.php?urlPage='.$recipe["urlPage"].'"><img src='.$recipe["urlImg"].' class="agrandir_oeuvre"></a>
+                            </li>';
+                    }
+                }
+                ?>
+            </ul>
+        </section>
+        <section>
+            <h1> 10 films aléatoire</h1>
+            <ul class="carousel">
+                <?php
+                //On affiche chaque film un par un
+                $nb_film = 0;
+                while ($nb_film !== 10) {
+                    $i = 0;
+                    $x = rand(0, count($recipe));
+                    foreach ($recipes as $recipe) {
+                        if ($i === $x){
+                            echo '<li>
+                                    <h2>'.$recipe["title"].'</h2>
+                                    <a href="oeuvre.php?urlPage='.$recipe["urlPage"].'"><img src='.$recipe["urlImg"].' class="agrandir_oeuvre"></a>
+                                </li>';
+                            $nb_film++;
+                        }
+                        $i++;
+                    }
                 }
                 ?>
             </ul>
