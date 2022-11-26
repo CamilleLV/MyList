@@ -23,26 +23,22 @@
 
         // Si tout va bien, on peut continuer
 
-        // On récupère tout le contenu de la table recipes
-        $sqlQuery = 'INSERT INTO films(title, urlPage, duree, urlImg, /*date,*/ realisateur, /*cast/0, cast/1, cast/2,*/ synopsis/*, note-spectateurs*/) VALUES(:title,:urlPage,:duree,:urlImg/*,:date*/,:realisateur/*,:cast/0,:cast/1,:cast/2*/,:synopsis/*,:note-spectateur*/);';
+        // On insere toutes les donnees
+        $sqlQuery = 'INSERT INTO films2(title, urlPage, duree, urlImg, date_sortie, realisateur, cast_0, cast_1, cast_2, synopsis, note_spectateurs) VALUES(:title,:urlPage,:duree,:urlImg,:date_sortie,:realisateur,:cast_0,:cast_1,:cast_2,:synopsis,:note_spectateur);';
         $recipesStatement = $mysqlClient->prepare($sqlQuery);
         $recipesStatement->execute([
             'title' => $_GET['title'],
             'urlPage' => $_GET['urlPage'],
             'duree' => $_GET['duree'],
             'urlImg' => $_GET['urlImg'],
-            //'date' => $_GET['date'],
+            'date_sortie' => $_GET['date_sortie'],
             'realisateur' => $_GET['realisateur'],
-            //'cast/0' => $_GET['cast/0'],
-            //'cast/1' => $_GET['cast/1'],
-            //'cast/2' => $_GET['cast/2'],
+            'cast_0' => $_GET['cast_0'],
+            'cast_1' => $_GET['cast_1'],
+            'cast_2' => $_GET['cast_2'],
             'synopsis' => $_GET['synopsis'],
-            //'note-spectateur' => $_GET['note-spectateur']
+            'note_spectateur' => $_GET['note_spectateur']
         ]);
-        /*
-        très gros problèmes
-        date, cast,et - sont des mots unutilisable dans la requete SQL
-        */
     ?>
     <p>oeuvre envoyée</p>
 </body>

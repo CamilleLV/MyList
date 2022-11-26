@@ -24,7 +24,7 @@
             // Si tout va bien, on peut continuer
 
             // On récupère tout le contenu de la table recipes
-            $sqlQuery = 'SELECT * FROM films';
+            $sqlQuery = 'SELECT * FROM films2';
             $recipesStatement = $mysqlClient->prepare($sqlQuery);
             $recipesStatement->execute();
             $recipes = $recipesStatement->fetchAll();
@@ -65,7 +65,7 @@
                 <?php
                 //On affiche chaque film un par un
                 foreach ($recipes as $recipe) {
-                    if ($recipe["note-spectateurs"] > "4,4"){
+                    if ($recipe["note_spectateurs"] > "4,4"){
                         echo '<li>
                                 <h2>'.$recipe["title"].'</h2>
                                 <a href="oeuvre.php?urlPage='.$recipe["urlPage"].'"><img src='.$recipe["urlImg"].' class="agrandir_oeuvre"></a>

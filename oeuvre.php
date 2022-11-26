@@ -23,7 +23,7 @@
         // Si tout va bien, on peut continuer
 
         // On récupère tout le contenu de la table recipes
-        $sqlQuery = 'SELECT * FROM films';
+        $sqlQuery = 'SELECT * FROM films2';
         $recipesStatement = $mysqlClient->prepare($sqlQuery);
         $recipesStatement->execute();
         $recipes = $recipesStatement->fetchAll();
@@ -39,13 +39,13 @@
                         <p>urlPage :'.$recipe["urlPage"].'</p>
                         <p>duree :'.$recipe["duree"].'</p>
                         <div><img src='.$recipe["urlImg"].'></div>
-                        <p>date :'.$recipe["date"].'</p>
+                        <p>date_sortie :'.$recipe["date_sortie"].'</p>
                         <p>réalisateur :'.$recipe["realisateur"].'</p>
-                        <p>cast/0 :'.$recipe["cast/0"].'</p>
-                        <p>cast/1 :'.$recipe["cast/1"].'</p>
-                        <p>cast/2 :'.$recipe["cast/2"].'</p>
+                        <p>cast_0 :'.$recipe["cast_0"].'</p>
+                        <p>cast_1 :'.$recipe["cast_1"].'</p>
+                        <p>cast_2 :'.$recipe["cast_2"].'</p>
                         <p>synopsis :'.$recipe["synopsis"].'</p>
-                        <p>note-spectateur :'.$recipe["note-spectateurs"].'</p>';
+                        <p>note_spectateur :'.$recipe["note_spectateurs"].'</p>';
             }
         }
     ?>
