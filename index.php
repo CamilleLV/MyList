@@ -77,6 +77,7 @@
         </section>
         <section>
             <h1> 10 films aléatoire</h1>
+            <!-- on peut avoir plusieur fois le même film-->
             <ul class="carousel">
                 <?php
                 //On affiche chaque film un par un
