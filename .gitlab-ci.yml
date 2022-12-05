@@ -1,8 +1,8 @@
 # The Docker image that will be used to build your app
 image: alpine:latest
 # Functions that should be executed before the build script is run
-stage: deploy
 pages:
+  stage: deploy
   script:
     - echo 'test'
   artifacts:
