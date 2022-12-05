@@ -1,0 +1,13 @@
+# The Docker image that will be used to build your app
+image: alpine:latest
+# Functions that should be executed before the build script is run
+stage: deploy
+pages:
+  script:
+    - echo 'test'
+  artifacts:
+    paths:
+      # The folder that contains the files to be exposed at the Page URL
+      - public
+  only:
+  - Adrien
