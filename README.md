@@ -1,8 +1,8 @@
-# templategp-agile-sae-s3
+# SAE S3 : Librairie d'oeuvres cinématographiques : MyList
 
 Template de base pour gérer (en mode SCRUM-light) les SAE du s3 avec GitLab 🦊
 
-![bannière](.ressources/SAE-s3-logo-bleu.png)
+![bannière](.ressources/Logo_MyList.png)
 
 ##  1. <a name='Tabledesmatires'></a> Table des matières
 <!-- vscode-markdown-toc -->
