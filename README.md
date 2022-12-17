@@ -7,7 +7,7 @@ Template de base pour gérer (en mode SCRUM-light) les SAE du s3 avec GitLab �
 ##  1. <a name='Tabledesmatires'></a> Table des matières
 <!-- vscode-markdown-toc -->
 * 1. [ Table des matières](#Tabledesmatires)
-* 2. [Pourquoi ce dépôt ?](#Pourquoicedpt)
+* 2. [Pourquoi MyList ?](#Pourquoicedpt)
 * 3. [Que propose ce dépôt ?](#Queproposecedpt)
 	* 3.1. [Les labels](#Leslabels)
 	* 3.2. [Les Jalons](#Lesjalons)
@@ -24,11 +24,9 @@ Template de base pour gérer (en mode SCRUM-light) les SAE du s3 avec GitLab �
 	/vscode-markdown-toc-config -->
 <!-- /vscode-markdown-toc -->
 
-##  2. <a name='Pourquoicedpt'></a>Pourquoi ce dépôt ?
+##  2. <a name='Pourquoicedpt'></a>Pourquoi "MyList" ?
 
-Ce dépot à pour objectif de fournir un outil de démarrage rapide pour organiser et gérer de façon agile un nouveau projet avec GitLab, notamment pour la SAE du s3.
-
-Partant du constat que le démarrage d'un projet est un processus long et complexe, on fournit ici un outil simple pour lancer un projet avec GitLab, que vous pourrez réutiiser et adapter au fil du temps avec votre propre affinité de GiLab.
+Inspiré par de nombreux sites de recommandations de séries/films/livres, nous avons voulu créer quelque chose de similaire. Le nom de MyList est fortement inspiré par le site AniList qui est un site de "Track" c'est-à-dire que l'on peut suivre nos séries animées préférées.
 
 ##  3. <a name='Queproposecedpt'></a>Que propose ce dépôt ?
 
