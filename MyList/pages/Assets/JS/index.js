@@ -1,5 +1,11 @@
 var sens = 0;  //Pour affichage : 0 = horizontal ; 1 = vertical
 
+
+
+
+/**
+ * Mise en place du JavaScript : affichage de la galerie d'oeuvres.
+ */
 //Tableau des images
 var mesImages = new Array();
 mesImages[0] = "../Assets/Images/i0.jpg";
@@ -20,7 +26,7 @@ function diaporama() {
     c = document.getElementById("classiques");
     d = document.getElementById("recommandations");
 
-    if (sens == 1){
+    if (sens == 1) {
         c.className = "conteneurV";
         d.className = "conteneurV";
     }
@@ -37,7 +43,7 @@ function diaporama() {
     }
 
 
-    for (let i = 0; i < mesImages.length ; i++) {
+    for (let i = 0; i < mesImages.length; i++) {
 
         numOeuvre = i.toString();
 
@@ -45,6 +51,8 @@ function diaporama() {
         elmt = document.createElement("img");
         elmt.id = "idImage" + numOeuvre;
         elmt.src = mesImages[i];
+        elmt.width = "200px";
+        elmt.height = "100px";
         //elmt.alt = "osef";
 
         elmt.onclick = function () { alert("coucou " + i.toString()) };
@@ -58,7 +66,7 @@ function diaporama() {
     }
 
 
-    for (let j = 0; j < mesImages.length ; j++) {
+    for (let j = 0; j < mesImages.length; j++) {
 
         numOeuvre = j.toString();
 
@@ -67,6 +75,7 @@ function diaporama() {
         elmt.id = "idImage" + numOeuvre;
         elmt.src = mesImages[j];
         elmt.height = "150px";
+        elmt.margin = "0 -100px";
         //elmt.alt = "osef";
 
         elmt.onclick = function () { alert("coucou " + j.toString()) };
@@ -79,4 +88,14 @@ function diaporama() {
         d.appendChild(elmt);
     }
 
+}
+
+/**
+    * Test d'Implémentation d'event listener
+    */
+films_tableau = document.getElementsByClassName("films_titres_et_oeuvres");
+for (let i = 0; i < films_tableau.length; i++) {
+    console.log(films_tableau[i]);
+    films_tableau[i].onclick = function () { alert("coucou " + i) };
+    //films_tableau[i][1].onclick = function () { alert("ALED " + i) };
 }

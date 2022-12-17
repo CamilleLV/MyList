@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="../Assets/Images/Logo_MyList.png" />
     <link rel="stylesheet" type="text/css" href="../Assets/CSS/index.css">
     <link rel="stylesheet" type="text/css" href="../Assets/CSS/commun.css">
     <title>Accueil | MyList</title>
@@ -11,7 +12,7 @@
 <body onload="diaporama()">
     <header>
         <nav>
-            <a href="index.html"><img id="logoMyList" src="../Assets/Images/Logo_MyList.png" alt="Logo MyList"
+            <a href="index.php"><img id="logoMyList" src="../Assets/Images/Logo_MyList.png" alt="Logo MyList"
                     width="100   " height="100"></a>
             <img id="personnage" src="../Assets/Images/Personnage.png" alt="Logo personnage" width="100" height="100">
 
@@ -106,13 +107,52 @@
     </div>
     <h3> Recommandations : </h3>
     <div id="recommandations" class="">
+
+        <?php
+        try {
+            // On se connecte à MySQL
+            $host = 'mysql:host=localhost;dbname=sae;charset=utf8';
+            $user = 'root';
+            $passeworld = '';
+            $mysqlClient = new PDO($host, $user, $passeworld);
+        } catch (Exception $e) {
+            // En cas d'erreur, on affiche un message et on arrête tout
+            die('Erreur : ' . $e->getMessage());
+        }
+
+        // Si tout va bien, on peut continuer
         
+        // On récupère tout le contenu de la table recipes
+        $sqlQuery = 'SELECT * FROM films';
+        $recipesStatement = $mysqlClient->prepare($sqlQuery);
+        $recipesStatement->execute();
+        $recipes = $recipesStatement->fetchAll();
+        ?>
+        <section>
+            <h1>Tous Les Films</h1>
+            <ul class="carousel">
+                <?php
+                //On affiche chaque film un par un
+                foreach ($recipes as $recipe) {
+                    echo '<li>
+                            <div class="films_titres_et_oeuvres" style=" width: 175px; height: 260px; border: 1px solid black; background-color: #ffff">
+                                <div class="films_oeuvres"style="height: 80%;
+                                width: 100%;background-image: url('. $recipe["url_img"] .'); background-position: center; background-size: 175px 200px;">
+                                </div>
+                                <h5 class="films_titres"style=" font-size: 10px">'. $recipe["title"] .'</h5>
+                            </div>
+                            </li>';
+                }
+                ?>
+            </ul>
+        </section>
     </div>
 
     <h3> </h3>
     <footer>
         <h3>Nous contacter: </h3>
     </footer>
+
 
     <script src="../Assets/JS/index.js"></script>
 </body>

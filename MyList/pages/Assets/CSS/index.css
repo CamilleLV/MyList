@@ -35,9 +35,7 @@
 .horizontal {
     margin: 2px;
     height: 200px;
-    /*max-width : 120px;*/
-    width: auto;
-    object-fit: fill;
+    width: 175px;
 }
 
 .conteneurV {
@@ -52,4 +50,8 @@
 .vertical {
     margin: 2px;
     width: 50px;
+}
+
+.films_titres:hover{
+    color: red;
 }
