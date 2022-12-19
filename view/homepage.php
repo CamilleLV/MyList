@@ -21,28 +21,12 @@
             </ul>
         </section>
         <section>
-            <h1>films avec une img</h1>
+            <h1>films avec une note = à 5</h1>
             <ul class="carousel">
                 <?php
                     //On affiche chaque film un par un
                     foreach ($recipes as $recipe) {
-                        if ($recipe["url_img"] !== "noImg.jpg"){
-                            echo '<li>
-                                    <h2>'.$recipe["title"].'</h2>
-                                    <a href="index.php?action=oeuvre&id='.$recipe["id"].'"><img src='.$recipe["url_img"].' class="agrandir_oeuvre"></a>
-                                </li>';
-                        }
-                    }
-                ?>
-            </ul>
-        </section>
-        <section>
-            <h1>films avec une note > ou = à 4,5</h1>
-            <ul class="carousel">
-                <?php
-                    //On affiche chaque film un par un
-                    foreach ($recipes as $recipe) {
-                        if ($recipe["note_spectateurs"] > "4,4"){
+                        if (($recipe["note_spectateurs"] === "5,0") && ($recipe["note_spectateurs"] !== "")){
                             echo '<li>
                                     <h2>'.$recipe["title"].'</h2>
                                     <a href="index.php?action=oeuvre&id='.$recipe["id"].'"><img src='.$recipe["url_img"].' class="agrandir_oeuvre"></a>
