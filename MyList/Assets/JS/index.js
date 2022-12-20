@@ -8,8 +8,8 @@ var sens = 0;  //Pour affichage : 0 = horizontal ; 1 = vertical
  */
 //Tableau des images
 var mesImages = new Array();
-mesImages[0] = "../Assets/Images/i0.jpg";
-mesImages[1] = "../Assets/Images/i1.jpg";
+mesImages[0] = "./i0.jpg";
+mesImages[1] = "Images/i1.jpg";
 mesImages[2] = "../Assets/Images/i2.jpg";
 mesImages[3] = "../Assets/Images/i3.jpg";
 mesImages[4] = "../Assets/Images/i4.jpg";

@@ -2,44 +2,19 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="../Assets/Images/Logo_MyList.png" />
-    <link rel="stylesheet" type="text/css" href="../Assets/CSS/index.css">
-    <link rel="stylesheet" type="text/css" href="../Assets/CSS/commun.css">
+    <meta charset="utf-8">
+    <link rel="icon" href="Assets/Images/Logo_MyList.png" />
+    <link rel="stylesheet" type="text/css" href="Assets/CSS/index.css">
+    <link rel="stylesheet" type="text/css" href="Assets/CSS/commun.css">
     <title>Accueil | MyList</title>
 </head>
 
 <body onload="diaporama()">
-    <header>
-        <nav>
-            <a href="index.php"><img id="logoMyList" src="../Assets/Images/Logo_MyList.png" alt="Logo MyList"
-                    width="100   " height="100"></a>
-            <div id="acces_profil">
-                <img id="personnage" src="../Assets/Images/Personnage.png" alt="Logo personnage" width="100"
-                    height="100">
-                <ul>
-                    <li><a href="#">Modifier le profil</a></li>
-                    <li><a href="#">Ma liste</a></li>
-                    <li><a href="#">Deconnexion</a></li>
-                </ul>
-            </div>
-
-            <ul style="padding:0;">
-                <li>
-                    <h1><a href="librairie.html">Librairie</a></h1>
-                </li>
-                <li>
-                    <h1><a href="suggerer_oeuvre.html">Suggérer une oeuvre</a></h1>
-                </li>
-            </ul>
-        </nav>
-    </header>
-
     <h2> Bienvenue sur MyList ! </h2>
 
     <!-- input tag --
-    <input id="searchbar" onkeyup="recherche()" type="text" name="search" placeholder="Rechercher une oeuvre">
-    <input id= "button-submit" type="submit" value="OK !">-->
+<input id="searchbar" onkeyup="recherche()" type="text" name="search" placeholder="Rechercher une oeuvre">
+<input id= "button-submit" type="submit" value="OK !">-->
     <style>
         #searchbox {
             background: #d8d8d8;
@@ -109,33 +84,12 @@
     <h3> Les Classiques : </h3>
     <div id="classiques" class="">
         <!-- TEST D'affichage d'une image venant de la base de donnée d'allociné
-            <img src="https://fr.web.img2.acsta.net/c_310_420/pictures/15/10/13/15/12/514297.jpg" height="200px">
-        -->
+        <img src="https://fr.web.img2.acsta.net/c_310_420/pictures/15/10/13/15/12/514297.jpg" height="200px">
+    -->
 
     </div>
     <h3> Recommandations : </h3>
     <div id="recommandations" class="">
-
-        <?php
-        try {
-            // On se connecte à MySQL
-            $host = 'mysql:host=localhost;dbname=sae;charset=utf8';
-            $user = 'root';
-            $passeworld = '';
-            $mysqlClient = new PDO($host, $user, $passeworld);
-        } catch (Exception $e) {
-            // En cas d'erreur, on affiche un message et on arrête tout
-            die('Erreur : ' . $e->getMessage());
-        }
-
-        // Si tout va bien, on peut continuer
-        
-        // On récupère tout le contenu de la table recipes
-        $sqlQuery = 'SELECT * FROM films';
-        $recipesStatement = $mysqlClient->prepare($sqlQuery);
-        $recipesStatement->execute();
-        $recipes = $recipesStatement->fetchAll();
-        ?>
         <section>
             <h1>Tous Les Films</h1>
             <ul class="carousel">
@@ -154,15 +108,7 @@
                 ?>
             </ul>
         </section>
-    </div>
-
-    <h3> </h3>
-    <footer>
-        <h3>Nous contacter: </h3>
-    </footer>
-
-
-    <script src="../Assets/JS/index.js"></script>
+        <script src="Assets/JS/index.js"></script>
 </body>
 
 </html>

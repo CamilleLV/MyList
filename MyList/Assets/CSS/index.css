@@ -55,3 +55,11 @@
 .films_titres:hover{
     color: red;
 }
+
+#acces_profil ul{
+    display: none;
+}
+
+#acces_profil img:hover > ul {
+    display: initial;
+  }
