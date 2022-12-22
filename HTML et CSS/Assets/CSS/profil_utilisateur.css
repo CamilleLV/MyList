@@ -1,0 +1,7 @@
+#prenom, #nom, #pseudo, #mail, #tel, #langue, #dateNaissance {
+    display: block;
+    margin-bottom: 2.5em;
+    margin-top: 2.5em;
+    margin-left: 8em;
+    font-weight: bolder;
+}
