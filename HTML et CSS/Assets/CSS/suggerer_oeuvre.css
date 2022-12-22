@@ -1,0 +1,17 @@
+* {
+    font-family: "Verdana", sans-serif;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+#titre, #auteur, #type, #langue, #tags, #photo, #description, #date, #duree, #nb_ep, #nb_tome, #duree_ep, #film, #serie, #livre {
+    margin-bottom: 1.5em;
+}
+
+input[type=submit] {
+    margin-bottom: 2em;
+}
