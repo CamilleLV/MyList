@@ -8,12 +8,12 @@ var sens = 0;  //Pour affichage : 0 = horizontal ; 1 = vertical
  */
 //Tableau des images
 var mesImages = new Array();
-mesImages[0] = "./i0.jpg";
-mesImages[1] = "Images/i1.jpg";
-mesImages[2] = "../Assets/Images/i2.jpg";
-mesImages[3] = "../Assets/Images/i3.jpg";
-mesImages[4] = "../Assets/Images/i4.jpg";
-mesImages[5] = "../Assets/Images/i5.jpg";
+mesImages[0] = "Assets/Images/i0.jpg";
+mesImages[1] = "Assets/Images/i0.jpg";
+mesImages[2] = "Assets/Images/i0.jpg";
+mesImages[3] = "Assets/Images/i0.jpg";
+mesImages[4] = "Assets/Images/i0.jpg";
+mesImages[5] = "Assets/Images/i0.jpg";
 mesImages[6] = "../Assets/Images/i6.jpg";
 mesImages[7] = "../Assets/Images/i7.jpg";
 mesImages[8] = "../Assets/Images/i8.jpg";
@@ -75,7 +75,7 @@ function diaporama() {
         elmt.id = "idImage" + numOeuvre;
         elmt.src = mesImages[j];
         elmt.height = "150px";
-        elmt.margin = "0 -100px";
+        //elmt.margin = "0 -100px";
         //elmt.alt = "osef";
 
         elmt.onclick = function () { alert("coucou " + j.toString()) };
@@ -96,6 +96,8 @@ function diaporama() {
 films_tableau = document.getElementsByClassName("films_titres_et_oeuvres");
 for (let i = 0; i < films_tableau.length; i++) {
     console.log(films_tableau[i]);
-    films_tableau[i].onclick = function () { alert("coucou " + i) };
+    films_tableau[i].onclick = function () { 
+        films_tableau[i]
+        alert("coucou " + i) };
     //films_tableau[i][1].onclick = function () { alert("ALED " + i) };
 }
