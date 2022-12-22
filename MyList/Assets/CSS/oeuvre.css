@@ -1,0 +1,41 @@
+* {
+    font-family: "Verdana", sans-serif;
+}
+
+body {
+    background-color: #FEFEE2;
+}
+
+ul {
+    list-style-type: none;
+}
+
+div.gauche {
+    float: left;
+    width: 50%;
+    /* Largeur de la div en pourcentage de la largeur de l'écran */
+}
+div.gauche *{
+    margin-left: 20%;
+}
+div.gauche img {
+    width: auto;
+    /* Largeur de l'image en pourcentage de la largeur de la div */
+}
+
+div.gauche ul {
+    list-style: none;
+    /* Supprime les puces des éléments de la liste */
+}
+
+div.droite {
+    float: right;
+    width: 50%;
+    /* Largeur de la div en pourcentage de la largeur de l'écran */
+    font-family: sans-serif;
+    /* Modifie la police de caractères du texte */
+}
+
+div.droite *{
+    margin-right: 20%;
+}
