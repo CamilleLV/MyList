@@ -9,7 +9,7 @@
     <title>Accueil | MyList</title>
 </head>
 
-<body onload="diaporama()">
+<body onload="diaporama()"> <!-- diaporama() provenant d'index.js aka programme inutile qui affiche dans les classiques le tableau -->
     <h2> Bienvenue sur MyList ! </h2>
 
     <!-- input tag --
@@ -40,7 +40,7 @@
             outline: none;
         }
 
-        #searchbox input[type="text"] {
+        #searchbox input[type="search"] {
             background: url(http://2.bp.blogspot.com/-xpzxYc77ack/VDpdOE5tzMI/AAAAAAAAAeQ/TyXhIfEIUy4/s1600/search-dark.png) no-repeat 10px 6px #fff;
             border-width: 1px;
             border-style: solid;
@@ -76,9 +76,9 @@
         }
     </style>
 
-    <form id="searchbox" method="get" action="search">
-        <input name="q" type="text" size="15" placeholder="Type here…">
-        <input id="button-submit" type="submit" value="Search">
+    <form id="searchbox" action="index.php" method="get">
+        <input name=titre type="search" size="15" placeholder="Rechercher…">
+        <input name="action" id="button-submit" type="submit" value="search"> <!--name="s"-->
     </form>
 
     <h3> Les Classiques : </h3>
@@ -110,7 +110,8 @@
                 ?>
             </ul>
         </section>
-        <script src="Assets/JS/index.js"></script>
+    </div>
+    <script src="Assets/JS/index.js"></script>
 </body>
 
 </html>
