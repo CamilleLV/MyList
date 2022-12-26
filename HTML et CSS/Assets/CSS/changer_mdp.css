@@ -1,0 +1,19 @@
+* {
+    font-family: "Verdana", sans-serif;
+    text-align: center;   
+}
+
+#mdp_actuel, #nouveau_mdp, #rep_nouveau_mdp {
+    display: block; 
+    margin-top: 0.5em;
+    margin-bottom: 2em;
+}
+
+input[type=submit], input[type=password] {
+    display: block;
+    margin: auto;
+}
+
+h2 {
+    margin-bottom: 2em;
+}
