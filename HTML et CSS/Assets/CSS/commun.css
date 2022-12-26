@@ -4,6 +4,8 @@
 
 header {
     background-color: #7B562B;
+    width:1520px;
+    height:125px;
   }
 
   header h1 {
@@ -39,7 +41,7 @@ header #logoMyList {
     padding-top: 0.66em;
    }
   
-header #personnage {
+header #personnage, header #listeDeroulant {
     vertical-align: middle;
     float:right;
     padding-right: 2em;
@@ -92,3 +94,4 @@ header #listeDeroulant a.active + .sousMenu {
 header #listeDeroulant, #listeDeroulant .sousMenu{
   position: relative;
 } 
+
