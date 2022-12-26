@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../Assets/CSS/changer_mdp.css">
+    <title>Changer de mot de passe</title>
+</head>
+
+<body>
+
+    <h2>Changer de mot de passe</h2>
+    
+    <form name="form" action="Changer_mdp.html" method="post" onsubmit="verif_mdp()">
+
+        <label for="mdp_actuel">Mot de passe actuel: </label>
+        <input id="mdp_actuel" name="mdp_actuel" type="password" required> 
+        <label for="nouveau_mdp">Nouveau mot de passe: </label>
+        <input id="nouveau_mdp" name="nouveau_mdp" type="password" required>
+        <label for="rep_nouveau_mdp">Confirmer le mot de passe: </label>
+        <input id="rep_nouveau_mdp" name="rep_nouveau_mdp" type="password" required>
+
+        <br>
+        
+        <!-- 
+        <label for="langue">Langue : </label>
+        <select name="langue">
+            <option>Français</option>
+            <option>Anglais</option>
+        </select>
+        <br><br>
+        -->
+        <input type="submit" name="Submit" value="Valider">
+
+        <br>
+    </form>
+
+    <script src="../Assets/JavaScript/script_changer_mdp.js"></script>
+
+</body>
+</html> 
