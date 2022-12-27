@@ -7,12 +7,10 @@ var champB = document.getElementById("rep_nouveau_mdp").value;
  
 if(champA == champB)
     {
-        document.form.submit();
-        return true;
+        this.form.submit();
     }
     else
     {
         alert("Les mots de passe ne sont pas identiques");
-        return false;
     }
 }
