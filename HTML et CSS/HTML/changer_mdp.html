@@ -10,7 +10,7 @@
 
     <h2>Changer de mot de passe</h2>
     
-    <form name="form" action="Changer_mdp.html" method="post" onsubmit="verif_mdp()">
+    <form name="form" action="Changer_mdp.html" method="post" onsubmit="return false">
 
         <label for="mdp_actuel">Mot de passe actuel: </label>
         <input id="mdp_actuel" name="mdp_actuel" type="password" required> 
@@ -29,7 +29,7 @@
         </select>
         <br><br>
         -->
-        <input type="submit" name="Submit" value="Valider">
+        <input type="button" name="Submit" value="Valider" onclick="verif_mdp()">
 
         <br>
     </form>
