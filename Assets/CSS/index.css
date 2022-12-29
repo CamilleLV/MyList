@@ -1,0 +1,121 @@
+#button-submit {
+    background: #6A6F75;
+    border-width: 0px;
+    padding: 9px 0px;
+    width: 23%;
+    cursor: pointer;
+    font: bold 12px Arial, Helvetica;
+    color: #fff;
+    text-shadow: 0 1px 0 #555;
+}
+
+#button-submit:hover {
+    background: #4f5356;
+}
+
+#button-submit:active {
+    background: #5b5d60;
+    outline: none;
+}
+
+#button-submit::-moz-focus-inner {
+    border: 0;
+}
+
+/*------- Affichage images----------*/
+
+.conteneurH {
+    width: 90%;
+    height: 35%;
+    margin: auto;
+    overflow: auto;
+    border: ridge 2px #AAAAAA;
+}
+
+.horizontal {
+    margin: 2px;
+    height: 200px;
+    /*max-width : 120px;*/
+    width: auto;
+    object-fit: fill;
+}
+
+.conteneurV {
+    text-align: center;
+    padding: 5px;
+    border: ridge 2px #AAAAAA;
+    width: 100px;
+    height: 200px;
+    overflow: auto;
+}
+
+.vertical {
+    margin: 2px;
+    width: 50px;
+}
+
+#searchbox {
+    background: #d8d8d8;
+    border: 4px solid #e8e8e8;
+    padding: 20px 10px;
+    width: 30%;
+    margin: auto;
+}
+
+#classiques img{
+    width: 175px;
+    height: 200px;
+}
+
+/*-----------------*/
+
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+input:focus:-moz-placeholder {
+    color: transparent;
+}
+
+input:focus::-moz-placeholder {
+    color: transparent;
+}
+
+#searchbox input {
+    outline: none;
+}
+
+#searchbox input[type="text"] {
+    background: url(http://2.bp.blogspot.com/-xpzxYc77ack/VDpdOE5tzMI/AAAAAAAAAeQ/TyXhIfEIUy4/s1600/search-dark.png) no-repeat 10px 6px #fff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #fff;
+    font: bold 12px Arial, Helvetica, Sans-serif;
+    color: #bebebe;
+    width: 65%;
+    padding: 8px 15px 8px 30px;
+}
+
+#button-submit {
+    background: #D89E5A;
+    border-width: 0px;
+    padding: 9px 0px;
+    width: 23%;
+    cursor: pointer;
+    font: bold 12px Arial, Helvetica;
+    color: #fff;
+    text-shadow: 0 1px 0 #555;
+}
+
+#button-submit:hover {
+    background: #7B562B;
+}
+
+#button-submit:active {
+    background: #553f26;
+    outline: none;
+}
+
+#button-submit::-moz-focus-inner {
+    border: 0;
+}
