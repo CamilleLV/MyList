@@ -5,7 +5,7 @@ var sens = 0;  //Pour affichage : 0 = horizontal ; 1 = vertical
 
 /**
  * Mise en place du JavaScript : affichage de la galerie d'oeuvres.
- */
+ *
 //Tableau des images
 var mesImages = new Array();
 mesImages[0] = "Assets/Images/i0.jpg";
@@ -88,7 +88,7 @@ function diaporama() {
         d.appendChild(elmt);
     }
 
-}
+}*/
 
 /**
     * Test d'Implémentation d'event listener

@@ -13,14 +13,10 @@ la branche d'adrien d'affichage et la balise encore dessous est celle du tuto. C
  ce soit la façon de faire qui bloque, peut etre faut-il utiliser l index.php pour pouvoir effectuer la recherche ? -->
 
 <body>
-    <p>Jggnfnfdnfdfnfnfngnfdnd</p>
+    <h3>Résultats correspondant à la recherche "<?php echo $terme;?>" : </h3>
     <?php
-    //On affiche chaque film un par un
+    //On affiche le film en question
     foreach ($recipes as $recipe) {
-        if ($recipe["title"] === $terme) {
-            echo '<h5 class="films_titres"style=" font-size: 10px">' . $recipe["title"] . '</h5>';
-        }
-        if ($recipe["title"] == $terme) {
             echo '<li>
             <div class="films_titres_et_oeuvres" style=" width: 175px; height: 260px; border: 1px solid black; background-color: #ffff">
                 <a href="index.php?action=oeuvre&id=' . $recipe["id"] . '">
@@ -31,22 +27,9 @@ la branche d'adrien d'affichage et la balise encore dessous est celle du tuto. C
                 </a>
             </div>
             </li>';
-        }
-        if (str_contains($terme, $recipe["title"])) {
-            echo '<li>
-                        <div class="films_titres_et_oeuvres" style=" width: 175px; height: 260px; border: 1px solid black; background-color: #ffff">
-                            <a href="index.php?action=oeuvre&id=' . $recipe["id"] . '">
-                                <div class="films_oeuvres"style="height: 80%;
-                                width: 100%;background-image: url(' . $recipe["url_img"] . '); background-position: center; background-size: 175px 200px;">
-                                </div>
-                                <h5 class="films_titres"style=" font-size: 10px">' . $recipe["title"] . '</h5>
-                            </a>
-                        </div>
-                        </li>';
-        }
+        
     }
     ?>
-    <p>ZAZYUUU</p>
 </body>
 
 </html>

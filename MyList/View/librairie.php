@@ -70,12 +70,11 @@
             border: 0;
         }
     </style>
-
+    
     <form id="searchbox" action="index.php" method="get">
-        <input name="action" type="search" size="15" placeholder="Rechercher…">
-        <input name="s" id="button-submit" type="submit" value="OK">
+        <input name=titre type="search" size="15" placeholder="Rechercher…">
+        <input name="action" id="button-submit" type="submit" value="search"> <!--name="s"-->
     </form>
-    </div>
     <h3> Tous les Films : </h3>
     <div id="recommandations" class="">
         <section>
