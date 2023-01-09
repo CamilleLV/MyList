@@ -2,7 +2,6 @@ var sens = 0;  //Pour affichage : 0 = horizontal ; 1 = vertical
 
 
 
-
 /**
  * Mise en place du JavaScript : affichage de la galerie d'oeuvres.
  *
@@ -90,7 +89,7 @@ function diaporama() {
 
 }*/
 
-/**
+    /**
     * Test d'Implémentation d'event listener
     */
 films_tableau = document.getElementsByClassName("films_titres_et_oeuvres");
@@ -101,3 +100,44 @@ for (let i = 0; i < films_tableau.length; i++) {
         alert("coucou " + i) };
     //films_tableau[i][1].onclick = function () { alert("ALED " + i) };
 }
+
+
+let button = document.getElementById("ajouterFilm");
+
+var urlcourante = document.location.href; 
+var id_film = urlcourante.substring (urlcourante.lastIndexOf( "id" )+3 );
+button.addEventListener("click", function() {requestToBDD(id_film)});
+
+async function requestToBDD(id_film) {
+    if(button.textContent == "Ajouter à ma Liste"){
+            let formData = new FormData();
+            formData.append('id_film', id_film);
+            let request = await fetch(
+              "Model/addToList.php",
+              { body: formData,
+                method: "post" }
+            );
+            //console.log(request.text);
+        
+            button.textContent = "Supprimer de ma Liste";
+        
+            return await request;
+    }
+    if(button.textContent == "Supprimer de ma Liste"){
+            let formData = new FormData();
+            formData.append('id_film', id_film);
+            let request = await fetch(
+              "Model/supprToList.php",
+              { body: formData,
+                method: "post" }
+            );
+            //console.log(request.text);
+        
+            button.textContent = "Ajouter à ma Liste";
+        
+            return await request;
+    }
+}
+
+
+console.log(id_film);

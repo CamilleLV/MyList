@@ -3,6 +3,7 @@
 require_once('./Controller/homepage.php');
 require_once('./Controller/oeuvre.php');
 require_once('./Controller/librairie.php');
+require_once('./Controller/userPage.php');
 require_once('./Controller/search-form.php');
 require_once('./Controller/404.php');
 
@@ -35,7 +36,9 @@ if (isset($_GET['action']) && $_GET['action'] !== '') {
 		}*/
 	} elseif ($_GET['action'] === 'librairie') {
 		library();
-	} else {
+	} elseif ($_GET['action'] === 'userPage') {
+		userPage();
+	}  else {
 		//echo "Erreur 404 : la page que vous recherchez n'existe pas.";
 		not_found();
 	}

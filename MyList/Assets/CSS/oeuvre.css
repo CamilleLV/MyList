@@ -15,12 +15,14 @@ div.gauche {
     width: 50%;
     /* Largeur de la div en pourcentage de la largeur de l'écran */
 }
-div.gauche *{
+
+div.gauche * {
     margin-left: 20%;
 }
+
 div.gauche img {
-    width: auto;
-    /* Largeur de l'image en pourcentage de la largeur de la div */
+    width:300px;
+    height:411px;
 }
 
 div.gauche ul {
@@ -36,6 +38,42 @@ div.droite {
     /* Modifie la police de caractères du texte */
 }
 
-div.droite *{
+div.droite * {
     margin-right: 20%;
+}
+
+.button-24 {
+    background: #7B562B;
+    border: 1px solid #7B562B;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #D89E5A;
+    cursor: pointer;
+    display: inline-block;
+    font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+}
+
+.button-24:hover,
+.button-24:active {
+    background-color: initial;
+    background-position: 0 0;
+    color: #7B562B;
+}
+
+.button-24:active {
+    opacity: .5;
 }
