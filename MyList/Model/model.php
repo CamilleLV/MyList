@@ -134,7 +134,7 @@ function recupListUser()
 
 function verifIDFilm($id)
 {
-    //session_start();
+    session_start();
     $id_film = $id;
 
     if (isset($_SESSION['id_user'])) {
@@ -145,7 +145,7 @@ function verifIDFilm($id)
         $mysqlClient = new PDO($host, $user, $passworld);
         $query = "SELECT * FROM film_liker WHERE film_liker.id = :id_film";
         $stmt = $mysqlClient->prepare($query);
-        $stmt->bindParam(":id_film", $_GET['id']);
+        $stmt->bindParam(":id_film", $id_film);
         $stmt->execute();
 
         $valVerif = $stmt->fetchAll();

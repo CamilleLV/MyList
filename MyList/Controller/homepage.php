@@ -5,5 +5,6 @@
         $recipes = getLessRecipes();
         require("View/header.php");
         require("View/homepage.php");
+        require("View/footer.php");
     }
 ?>

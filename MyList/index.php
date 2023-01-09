@@ -5,6 +5,8 @@ require_once('./Controller/oeuvre.php');
 require_once('./Controller/librairie.php');
 require_once('./Controller/userPage.php');
 require_once('./Controller/search-form.php');
+require_once('./Controller/legalNotice.php');
+require_once('./Controller/contact.php');
 require_once('./Controller/404.php');
 
 if (isset($_GET['action']) && $_GET['action'] !== '') {
@@ -38,6 +40,10 @@ if (isset($_GET['action']) && $_GET['action'] !== '') {
 		library();
 	} elseif ($_GET['action'] === 'userPage') {
 		userPage();
+	} elseif ($_GET['action'] === 'contact') {
+		contact();
+	} elseif ($_GET['action'] === 'mentionsLegales') {
+		legalNotice();
 	}  else {
 		//echo "Erreur 404 : la page que vous recherchez n'existe pas.";
 		not_found();
