@@ -9,7 +9,7 @@
     <title>Accueil | MyList</title>
 </head>
 
-<body onload="diaporama()"> <!-- diaporama() provenant d'index.js aka programme inutile qui affiche dans les classiques le tableau -->
+<body>
     <h2> Bienvenue sur MyList ! </h2>
 
     <form id="searchbox" action="index.php" method="get">

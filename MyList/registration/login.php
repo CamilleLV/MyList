@@ -17,8 +17,10 @@ if (isset($_POST['username'])){
     $query = "SELECT * FROM `users` WHERE username='$username' and password='".hash('sha256', $password)."'";
 	$result = mysqli_query($conn,$query) or die(mysql_error());
 	
+
 	if (mysqli_num_rows($result) == 1) {
 		$user = mysqli_fetch_assoc($result);
+		$_SESSION['id_user'] = $user['id_user'];
 		// vérifier si l'utilisateur est un administrateur ou un utilisateur
 		if ($user['type'] == 'admin') {
 			header('location: admin/home.php');		  
@@ -29,6 +31,7 @@ if (isset($_POST['username'])){
 		$message = "Le pseudonyme ou le mot de passe est incorrect.";
 	}
 }
+
 ?>
 <form class="box" action="" method="post" name="login">
 <h1 class="box-title">Connexion</h1>
