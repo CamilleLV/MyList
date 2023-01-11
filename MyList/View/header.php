@@ -5,6 +5,7 @@
         <div id="acces_profil">
             <a href="index.php?action=userPage"><img id="personnage" src="../Assets/Images/Personnage.png"
                     alt="Logo personnage" width="100" height="100"></a>
+                    <a href="registration/login.php">Connexion</a>
             <ul>
                 <li><a href="#">Modifier le profil</a></li>
                 <li><a href="#">Ma liste</a></li>

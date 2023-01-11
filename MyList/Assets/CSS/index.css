@@ -1,3 +1,5 @@
+/* -----------*/
+
 #button-submit {
     background: #6A6F75;
     border-width: 0px;
@@ -22,7 +24,9 @@
     border: 0;
 }
 
-/*------- Affichage images----------*/
+/* -----------*/
+
+/*------- Affichage images  Régler ici le double ligne et rendre ca plus moderne----------*/
 
 .conteneurH {
     width: 90%;

@@ -1,3 +1,4 @@
+/* A Adapter pr que ca fasse plus moderne*/
 * {
     font-family: "Verdana", sans-serif;
 }
@@ -42,6 +43,7 @@ div.droite * {
     margin-right: 20%;
 }
 
+/* Bouton 24 à pas toucher */
 .button-24 {
     background: #7B562B;
     border: 1px solid #7B562B;
