@@ -13,10 +13,11 @@
      */
     foreach ($recipes as $recipe) {
         if ($recipe["id"] == $id) {
-            echo '' . $recipe["title"] . ' ' ?> | MyList</title><?php
+            echo ''. $recipe["title"] .' | MyList';
         }
     }
-                   ?>
+    ?>
+    </title>
 
 
 </head>

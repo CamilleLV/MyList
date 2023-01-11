@@ -1,5 +1,5 @@
 <?php
-
+//retourne tout les films
 function getRecipes(): array
 {
     try {
@@ -24,6 +24,7 @@ function getRecipes(): array
     return $recipes;
 }
 
+//return les films recherche
 function getOneRecipe($terme): array
 {
     try {
@@ -49,5 +50,10 @@ function getOneRecipe($terme): array
     $recipe = $recipesStatement->fetchAll();
 
     return $recipe;
+}
+
+
+function login() {
+    
 }
 ?>
