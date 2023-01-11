@@ -1,9 +1,9 @@
 <header>
     <nav>
-        <a href="index.php"><img id="logoMyList" src="../Assets/Images/Logo_MyList.png" alt="Logo MyList" width="100   "
+        <a href="index.php"><img id="logoMyList" src="./Assets/Images/Logo_MyList.png" alt="Logo MyList" width="100   "
                 height="100"></a>
         <div id="acces_profil">
-            <a href="index.php?action=userPage"><img id="personnage" src="../Assets/Images/Personnage.png"
+            <a href="index.php?action=userPage"><img id="personnage" src="./Assets/Images/Personnage.png"
                     alt="Logo personnage" width="100" height="100"></a>
                     <a href="registration/login.php">Connexion</a>
             <ul>
