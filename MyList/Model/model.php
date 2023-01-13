@@ -105,7 +105,7 @@ function recommandationTag($tags_reference)
     $recipe = $recipesStatement->fetchAll();
 
     return $recipe;
-    
+
 }
 
 
