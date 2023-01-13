@@ -91,7 +91,7 @@ function diaporama() {
 
     /**
     * Test d'Implémentation d'event listener
-    */
+    *
 films_tableau = document.getElementsByClassName("films_titres_et_oeuvres");
 for (let i = 0; i < films_tableau.length; i++) {
     console.log(films_tableau[i]);
@@ -99,7 +99,7 @@ for (let i = 0; i < films_tableau.length; i++) {
         films_tableau[i]
         alert("coucou " + i) };
     //films_tableau[i][1].onclick = function () { alert("ALED " + i) };
-}
+}*/
 
 
 let button = document.getElementById("ajouterFilm");
@@ -141,3 +141,39 @@ async function requestToBDD(id_film) {
 
 
 console.log(id_film);
+
+/* Slider */
+
+var swiper = new Swiper(".slide-container", {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    sliderPerGroup: 4,
+    loop: true,
+    centerSlide: "true",
+    fade: "true",
+    grabCursor: "true",
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      520: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      1000: {
+        slidesPerView: 4,
+      },
+    },
+  });
