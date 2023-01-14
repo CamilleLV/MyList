@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="icon" href="./Assets/Images/Logo_MyList.png" />
-    <link rel="stylesheet" type="text/css" href="Assets/CSS/index.css">
+    <link rel="stylesheet" type="text/css" href="Assets/CSS/homepage.css">
     <link rel="stylesheet" type="text/css" href="Assets/CSS/commun.css">
     <link rel="stylesheet" type="text/css" href="Assets/CSS/swiper-bundle.min.css">
 
@@ -32,76 +32,24 @@
             <div class="container swiper">
       <div class="slide-container">
         <div class="card-wrapper swiper-wrapper">
-          <div class="card swiper-slide">
-            <div class="image-box">
-              <img src="Assets/Images/i0.jpg" alt="" />
-            </div>
-            <div class="details">
-              <div class="name-job">
-                <h3 class="name">Narnia</h3>
-              </div>
-            </div>
-          </div>
-          <div class="card swiper-slide">
-            <div class="image-box">
-            <img src="Assets/Images/i0.jpg" alt="" />
-            </div>
-            <div class="details">
-              <div class="name-job">
-                <h3 class="name">Narnia</h3>
-              </div>
-            </div>
-          </div>
-          <div class="card swiper-slide">
-            <div class="image-box">
-            <img src="Assets/Images/i0.jpg" alt="" />
-            </div>
-            <div class="details">
-              <div class="name-job">
-                <h3 class="name">Narnia</h3>
-              </div>
-            </div>
-          </div>
-          <div class="card swiper-slide">
-            <div class="image-box">
-            <img src="Assets/Images/i0.jpg" alt="" />
-            </div>
-            <div class="details">
-              <div class="name-job">
-                <h3 class="name">Narnia</h3>
-              </div>
-            </div>
-          </div>
-          <div class="card swiper-slide">
-            <div class="image-box">
-            <img src="Assets/Images/i0.jpg" alt="" />
-            </div>
-            <div class="details">
-              <div class="name-job">
-                <h3 class="name">Narnia</h3>
-              </div>
-            </div>
-          </div>
-          <div class="card swiper-slide">
-            <div class="image-box">
-            <img src="Assets/Images/i0.jpg" alt="" />
-            </div>
-            <div class="details">
-              <div class="name-job">
-                <h3 class="name">Narnia</h3>
-              </div>
-            </div>
-          </div>
-          <div class="card swiper-slide">
-            <div class="image-box">
-            <img src="Assets/Images/i0.jpg" alt="" />
-            </div>
-            <div class="details">
-              <div class="name-job">
-                <h3 class="name">Narnia</h3>
-              </div>
-            </div>
-          </div>
+
+        <?php
+            foreach ($recipes as $recipe) {
+              echo '
+              <div class="card swiper-slide">
+                        <a href="index.php?action=oeuvre&id=' . $recipe["id"] . '">
+                            <div class="image-box">
+                                <img src="' . $recipe["url_img"] . '" alt="" />
+                            </div>
+                            <div class="details">
+                                <div class="name-job">
+                                    <h3 class="name">' . $recipe["title"] . '</h3>
+                                </div>
+                            </div>
+                        </div>
+                        </a>';
+            } ?>
+          
         </div>
       </div>
       <div class="swiper-button-next swiper-navBtn"></div>
