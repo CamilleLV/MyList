@@ -1,0 +1,103 @@
+#button-submit {
+    background: #6A6F75;
+    border-width: 0px;
+    padding: 9px 0px;
+    width: 23%;
+    cursor: pointer;
+    font: bold 12px Arial, Helvetica;
+    color: #fff;
+    text-shadow: 0 1px 0 #555;
+}
+
+#button-submit:hover {
+    background: #4f5356;
+}
+
+#button-submit:active {
+    background: #5b5d60;
+    outline: none;
+}
+
+#button-submit::-moz-focus-inner {
+    border: 0;
+}
+
+/*------- Affichage images----------*/
+
+
+/* Slider */
+
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: #efefef;
+}
+
+.container {
+    max-width: 1120px;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.slide-container {
+    margin: 0 30px;
+    overflow: hidden;
+}
+
+.card .image-box {
+    height: 200px;
+}
+
+.card .image-box img {
+    width: 175px;
+    height: 200px;
+    border-radius: 8px 8px 0 0;
+    margin-top: 17em;
+    margin-left: 2em;
+}
+
+.card .details {
+    align-items: center;
+    margin-top: 19em;
+    margin-left: 1.5em;
+}
+
+.details .name {
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.swiper-navBtn {
+    color: #000;
+    height: 40px;
+    width: 40px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+    font-size: 18px;
+}
+
+.swiper-pagination-bullet {
+    background-color: #000;
+}
+
+@media screen and (max-width: 768px) {
+    .swiper-navBtn {
+        display: none;
+    }
+}
