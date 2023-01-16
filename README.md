@@ -48,9 +48,10 @@ Vous pourrez récupérer la version finale du projet ainsi que d'autres fichiers
 Ce dépôt est sous licence [MIT](LICENSE)
 
 ##  6. <a name='Auteur'></a>Auteurs
-Contacts : NOM prénom / @discord (*dernière MAJ : 16/01/2023*) / E-Mail Universitaire
-	- JIN  Vanessa /  Vanessa6023#7958 / vanessa.jin@etu.univ-lyon1.fr
-	- TACHER Adrien / adri#7749 / adrien.tacher@etu.univ-lyon1.fr
-	- BROUTIER Charlène / Neluunn#3702 / charlene.broutier@etu.univ-lyon1.fr
-	- LAVERIE Camille / Wasabi#3136 / camille.laverie@etu.univ-lyon1.fr
+	Contacts : 
+	-	NOM prénom / @discord (*dernière MAJ : 16/01/2023*) / E-Mail Universitaire
+	-	JIN  Vanessa /  Vanessa6023#7958 / vanessa.jin@etu.univ-lyon1.fr
+	-	TACHER Adrien / adri#7749 / adrien.tacher@etu.univ-lyon1.fr
+	-	BROUTIER Charlène / Neluunn#3702 / charlene.broutier@etu.univ-lyon1.fr
+	-	LAVERIE Camille / Wasabi#3136 / camille.laverie@etu.univ-lyon1.fr
 Ce travail est basé sur le kit starter de projet de [YoanDev](https://yoandev.co)
