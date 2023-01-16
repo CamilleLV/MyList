@@ -13,8 +13,7 @@ if (!isset($_SESSION["username"])) {
 <head>
     <meta charset="utf-8">
     <link rel="icon" href="./Assets/Images/Logo_MyList.png" />
-    <link rel="stylesheet" type="text/css" href="./Assets/CSS/index.css">
-    <link rel="stylesheet" type="text/css" href="./Assets/CSS/commun.css">
+    <link rel="stylesheet" type="text/css" href="./Assets/CSS/toutespages.css">
     <title>Ma Liste | MyList</title>
 </head>
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="Assets/CSS/inscription.css">
-    <link rel="stylesheet" type="text/css" href="Assets/CSS/commun.css">
+    <link rel="stylesheet" type="text/css" href="Assets/CSS/toutespages.css">
     <title>Formulaire d'inscription</title>
 </head>
 

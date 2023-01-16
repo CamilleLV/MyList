@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <link rel="icon" href="Assets/Images/Logo_MyList.png" />
     <link rel="stylesheet" href="../Assets/CSS/oeuvre.css">
-    <link rel="stylesheet" type="text/css" href="Assets/CSS/commun.css">
+    <link rel="stylesheet" type="text/css" href="Assets/CSS/toutespages.css">
     <title>
         <?php
         /**

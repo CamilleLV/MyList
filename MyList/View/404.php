@@ -3,7 +3,7 @@
 <head>
 <link rel="icon" href="../Assets/Images/Logo_MyList.png" />
     <link rel="stylesheet" type="text/css" href="Assets/CSS/index.css">
-    <link rel="stylesheet" type="text/css" href="Assets/CSS/commun.css">
+    <link rel="stylesheet" type="text/css" href="Assets/CSS/toutespages.css">
     <title>Erreur 404 | MyList</title>
 </head>
     <body>
