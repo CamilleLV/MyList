@@ -1,22 +1,17 @@
 # SAE S3 : Librairie d'oeuvres cinématographiques : MyList
 
-Template de base pour gérer (en mode SCRUM-light) les SAE du s3 avec GitLab 🦊
+SAE du S3 avec GitLab 🦊
 
 ![bannière](.ressources/Logo_MyList.png)
 
 ##  1. <a name='Tabledesmatires'></a> Table des matières
 <!-- vscode-markdown-toc -->
 * 1. [ Table des matières](#Tabledesmatires)
-* 2. [Pourquoi MyList ?](#Pourquoicedpt)
+* 2. [Pourquoi MyList ?](#PourquoiML)
 * 3. [Que propose ce dépôt ?](#Queproposecedpt)
-	* 3.1. [Les labels](#Leslabels)
-	* 3.2. [Les Jalons](#Lesjalons)
-	* 3.3. [Le Board](#LeBoard)
-	* 3.4. [Les branches](#Lesbranches)
-	* 3.5. [Modèles pour les issues et les merges requests](#Modlespourlesissuesetlesmergesrequests)
 * 4. [Comment utiliser ce dépôt ?](#Commentutilisercedpt)
 * 5. [Licence](#Licence)
-* 6. [Auteur](#Auteur)
+* 6. [Auteurs](#Auteur)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -24,86 +19,38 @@ Template de base pour gérer (en mode SCRUM-light) les SAE du s3 avec GitLab �
 	/vscode-markdown-toc-config -->
 <!-- /vscode-markdown-toc -->
 
-##  2. <a name='Pourquoicedpt'></a>Pourquoi "MyList" ?
+##  2. <a name='PourquoiML'></a>Pourquoi "MyList" ?
 
 Inspiré par de nombreux sites de recommandations de séries/films/livres, nous avons voulu créer quelque chose de similaire. Le nom de MyList est fortement inspiré par le site AniList qui est un site de "Track" c'est-à-dire que l'on peut suivre nos séries animées préférées.
 
 ##  3. <a name='Queproposecedpt'></a>Que propose ce dépôt ?
 
-Ce dépôt fournit un ensemble de modèles, de fichiers et de paramétrages pour vous faciliter le démarrage d'un projet avec GitLab, que vous pouvez modifier à volonté.
-Vous trouverez les éléments suivants :
-
+Ce dépôt fournit l'ensemble de fichiers produits par les différents auteurs du projet, vous y trouverez notamment :
 -   Ce fichier README.md
--   Des modèles pour les issues et les merge requests, et un modèle pour la réunion en séance avec le tuteur-SAE 
--   Une collection de labels
--   Une liste de jalons (_milestones_) correspondant aux dates des séances de SAE avec le tuteur
--   Un modèle de Board
--   3 Branches spécifiques à la SAE :
+-   Un board avec nos tâches et différents labels.
+-   7 Branches spécifiques à la SAE permettant de voir l'évolution de chacun.e.s sur le projet :
     -   Main
+	-	Adrien
+	-	Charlène
+	-	Vanessa
+	-	Camille
     -   Pré-Démonstration
-    -   Démonstration
+    -   _Revue-finale_
 
 (Dans un cadre professionnel, ces 2 dernières branches s'appellent _pré-production_ et _production_)
 
-###  3.1. <a name='Leslabels'></a>Les labels
-
-Les labels sont des éléments qui sont associés à des _issues_ et _merge requests_ : ils permettent de les classer, les organiser et les identifier simplement. Voici ceux qu'on propose ici, vous pouvez en supprimer ou ajouter d'autres.
-
-On a distingué les labels prioritaires :
-
-![label](.ressources/labels.png)
-
-Des labels utilisés pour le board :
-
-![label](.ressources/labels2.png)
-
-###  3.2. <a name='Lesjalons'></a>Les Jalons
-
-Les jalons (milestones) sont les échéances connues du projet, qu'il faut préparer ou pour lesquelles certaines tâches / livrables doivent être terminées.
-Dans le modèle, on a défini des jalons qui devraient vous aider, notamment pour préparer chaque séance de SAE avec le tuteur.
-
-Libre à vous de les adapter.
-
-![label](.ressources/jalons.png)
-
-###  3.3. <a name='LeBoard'></a>Le Board
-
-Le Board est l'outil central de GitLab pour organiser et gérer les tâches afférentes au projet.
-
-Il permet de les visualiser et de suivre leur progression.
-
-La structure de ce board adopte l'approche [Scrumban](https://asana.com/fr/resources/scrumban).
-
-![board](.ressources/theBoard.png)
-
-###  3.4. <a name='Lesbranches'></a>Les branches
-
-Les trois branches proposées dans ce template permettent de gérer de manière simple l'état du votre projet, jusqu'à la revue finale de projet devant un jury de 2 enseignants.
-
-Ce modèle est librement inspiré de l'approche GitLab Flow, pour en savoir plus : [GitLab Flow](https://www.youtube.com/watch?v=ZJuUz5jWb44).
-
-![](.ressources/branches.png)
-
-###  3.5. <a name='Modlespourlesissuesetlesmergesrequests'></a>Modèles pour les issues et les merges requests
-
-Ce template propose des modèles pour les _issues_ et les _merge requests_ afin de simplifier et standardiser leur utilisation par les équipes du projet.
-
-![board](.ressources/issues.png)
-
-![board](.ressources/mr.png)
-
 ##  4. <a name='Commentutilisercedpt'></a>Comment utiliser ce dépôt ?
 
-> Vous utilisez ce dépôt comme **base d'inspiration** pour votre gérer votre projet simplement en adaptant les éléments à votre contexte.
-
-> **Vous pouvez également télécharger l'export du dépôt pour l'importer avec tous les éléments dèja présents (labels, issues, merges requests, board, branches, ...)**
-> 1. [Télécharger l'export du dépôt](.ressources/export.tar.gz)
-> 2. [Importer l'export dans GitLab](https://docs.gitlab.com/ee/user/project/settings/import_export.html#import-a-project-and-its-data)
+Vous pourrez récupérer la version finale du projet ainsi que d'autres fichiers (comme le dossier d'Analyse et Conception ou les maquettes du projet). Vous accéderez à cette version finale du projet dans la branche _Revue-finale_.
 
 ##  5. <a name='Licence'></a>Licence
 
 Ce dépôt est sous licence [MIT](LICENSE)
 
-##  6. <a name='Auteur'></a>Auteur
-Contact : @V.Deslandres
+##  6. <a name='Auteur'></a>Auteurs
+Contacts : NOM prénom / @discord (*dernière MAJ : 16/01/2023*) / E-Mail Universitaire
+	- JIN  Vanessa /  Vanessa6023#7958 / vanessa.jin@etu.univ-lyon1.fr
+	- TACHER Adrien / adri#7749 / adrien.tacher@etu.univ-lyon1.fr
+	- BROUTIER Charlène / Neluunn#3702 / charlene.broutier@etu.univ-lyon1.fr
+	- LAVERIE Camille / Wasabi#3136 / camille.laverie@etu.univ-lyon1.fr
 Ce travail est basé sur le kit starter de projet de [YoanDev](https://yoandev.co)
