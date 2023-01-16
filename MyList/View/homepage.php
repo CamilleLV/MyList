@@ -26,39 +26,7 @@
     <div id="recommandations" class="">
         <section>
             <h1>Tous Les Films</h1>
-
-            <div class="container swiper">
-                <div class="slide-container">
-                    <div class="card-wrapper swiper-wrapper">
-
-                        <?php
-                        foreach ($recipes as $recipe) {
-                            echo '
-                        <a href="index.php?action=oeuvre&id=' . $recipe["id"] . '">
-                        <div class="card swiper-slide">
-                            <div class="image-box">
-                                <img src="' . $recipe["url_img"] . '" alt="" />
-                            </div>
-                            <div class="details">
-                                <div class="name-job">
-                                    <h3 class="name">' . $recipe["title"] . '</h3>
-                                </div>
-                            </div>
-                        </div>
-                        </a>';
-                        } ?>
-
-
-                    </div>
-                </div>
-                <div class="swiper-button-next swiper-navBtn"></div>
-                <div class="swiper-button-prev swiper-navBtn"></div>
-                <div class="swiper-pagination"></div>
-
-            </div>
-
-
-            <!--<ul class="carousel">
+            <ul class="carousel">
                 <?php
                 //On affiche chaque film un par un
                 foreach ($recipes as $recipe) {
@@ -74,7 +42,6 @@
                             </li>';
                 }
                 ?>
-            </ul>-->
         </section>
     </div>
     <script src="./Assets/JS/index.js"></script>
