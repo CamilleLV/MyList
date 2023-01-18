@@ -23,6 +23,29 @@ function getRecipes(): array
     return $recipes;
 }
 
+function getRandomRecipes(): array
+{
+    try {
+        // On se connecte à MySQL
+        $host = 'mysql:host=localhost;dbname=sae;charset=utf8';
+        $user = 'root';
+        $passworld = '';
+        $mysqlClient = new PDO($host, $user, $passworld);
+    } catch (Exception $e) {
+        // En cas d'erreur, on affiche un message et on arrête tout
+        die('Erreur : ' . $e->getMessage());
+    }
+
+    // Si tout va bien, on peut continuer
+    // On récupère tout le contenu de la table recipes
+    $sqlQuery = 'SELECT * FROM films ORDER BY RAND() LIMIT 500';
+    $recipesStatement = $mysqlClient->prepare($sqlQuery);
+    $recipesStatement->execute();
+    $recipes = $recipesStatement->fetchAll();
+
+    return $recipes;
+}
+
 function getLessRecipes(): array
 {
     try {
@@ -131,6 +154,29 @@ function recupListUser()
         return $values;
     }
 }
+
+//function recoRealisateur()                        N'ai pas encore finie ni utilisée.
+//{
+
+    /*chdir("../");
+    require('./registration/config.php');
+    session_start();
+
+    if (isset($_SESSION['id_user'])) {
+        $id_user = $_SESSION['id_user'];
+        $host = 'mysql:host=localhost;dbname=sae;charset=utf8';
+        $user = 'root';
+        $passworld = '';
+        $mysqlClient = new PDO($host, $user, $passworld);
+        $query = "SELECT * FROM films, film_liker WHERE film_liker.id = films.id";
+        $stmt = $mysqlClient->prepare($query);
+        $stmt->execute();
+        //echo "true";
+
+        $values = $stmt->fetchAll();
+        return $values;
+    }
+}*/
 
 function verifIDFilm($id)
 {

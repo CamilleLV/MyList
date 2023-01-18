@@ -22,23 +22,27 @@ header li {
     padding-bottom: 1em;
 }
 
-header a {
+header a,
+footer a {
     outline: none;
     text-decoration: none;
     padding: 2px 1px 0;
 }
 
-header a:link {
+header a:link,
+footer a:link {
     color: black;
 }
 
-header a:hover {
+header a:hover,
+footer a:hover {
     border-bottom: 1px solid;
     background: #D89E5A;
     ;
 }
 
-header a:visited {
+header a:visited,
+footer a:visited {
     color: black;
 }
 
@@ -60,6 +64,12 @@ footer {
     padding-top: 2em;
     padding-bottom: 2em;
     padding-left: 2em;
+}
+
+footer h3 {
+    padding-left: 10em;
+    display: inline;
+    font-size: 35px;
 }
 
 body {
@@ -126,4 +136,9 @@ input:focus::-moz-placeholder {
 
 #button-submit::-moz-focus-inner {
     border: 0;
+}
+
+
+header a{
+    color: aqua;
 }

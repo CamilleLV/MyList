@@ -7,20 +7,15 @@
                     alt="Logo personnage" width="100" height="100"></a>
                     <a href="registration/login.php">Connexion</a>
                     <a href="registration/logout.php">Deconnexion</a>
-            <ul>
-                <li><a href="#">Modifier le profil</a></li>
-                <li><a href="#">Ma liste</a></li>
-                <li><a href="#">Deconnexion</a></li>
-            </ul>
         </div>
 
         <ul style="padding:0;">
             <li>
                 <h1><a href="index.php?action=librairie">Librairie</a></h1>
             </li>
-            <li>
+            <!--<li>
                 <h1><a href="suggerer_oeuvre.html">Suggérer une oeuvre</a></h1>
-            </li>
+            </li>-->
         </ul>
     </nav>
 </header>

@@ -21,13 +21,12 @@
         <input name="action" id="button-submit" type="submit" value="Rechercher">
     </form>
 
-    <div id="recommandations" class="">
-        <h3>Recommandations :</h3>
-        <div class="container swiper">
-            <div class="slide-container">
-                <div class="card-wrapper swiper-wrapper">
+    <h3>Tous les Films</h3>
+    <div class="container swiper">
+        <div class="slide-container">
+            <div class="card-wrapper swiper-wrapper">
 
-                    <?php
+            <?php
                     foreach ($recipes as $recipe) {
                         echo '
               <div class="card swiper-slide">
@@ -44,16 +43,15 @@
                 </div>';
                     } ?>
 
-                </div>
             </div>
-            <div class="swiper-button-next swiper-navBtn"></div>
-            <div class="swiper-button-prev swiper-navBtn"></div>
-            <div class="swiper-pagination"></div>
         </div>
-        <script src="Assets/JS/swiper-bundle.min.js"></script>
-        <script src="Assets/JS/index.js"></script>
+        <div class="swiper-button-next swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn"></div>
+        <div class="swiper-pagination"></div>
     </div>
-</body>
+
+    <script src="./Assets/JS/swiper-bundle.min.js"></script>
+    <script src="./Assets/JS/index.js"></script>
 </body>
 
 </html>

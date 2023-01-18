@@ -19,7 +19,7 @@ if (isset($_GET['action']) && $_GET['action'] !== '') {
 
 			die;
 		}
-	} elseif ($_GET['action'] === 'search') {
+	} elseif ($_GET['action'] === 'Rechercher') {
 		/*$_GET['titre'] = htmlspecialchars($_GET['titre']); //pour sécuriser le formulaire contre les failles html
 		$terme = $_GET['titre'];*/
 		$terme = htmlspecialchars($_GET['titre']); //pour sécuriser le formulaire contre les failles html

@@ -51,7 +51,7 @@
             echo '<div class="droite">
                 <h2>' . $recipe["title"] . '</h2>
                 
-                    <button id="ajouterFilm" class="button-24" role="button">' . $infoButton . '</button>
+                <button id="ajouterFilm" class="button-24" role="button">' . $infoButton . '</button>
                 
                 <p>' . $recipe["synopsis"] . '</p>
         
@@ -112,7 +112,7 @@
 
     ?>
 
-    <script src="Assets/JS/index.js"></script>
+    <script src="Assets/JS/oeuvreAddFilm.js"></script>
 </body>
 
 </html>
