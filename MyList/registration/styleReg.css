@@ -1,29 +1,35 @@
 body {
-  background: #1c242d;
+  background: #7B562D;
 }
+
 .box {
   border: 1px solid #c4c4c4;
   padding: 30px 25px 10px 25px;
   background: white;
   margin: 30px auto;
   width: 360px;
+  border-radius: 5%;
 }
+
 h1.box-logo a {
-  text-decoration:none;
+  text-decoration: none;
 }
+
 h1.box-title {
-  color: #AEAEAE;
+  color: #D89E5A;
   background: #f8f8f8;
   font-weight: 300;
   padding: 15px 25px;
   line-height: 30px;
   font-size: 25px;
-  text-align:center;
+  text-align: center;
   margin: -27px -26px 26px;
+  border-radius: 25%;
 }
+
 .box-button {
   border-radius: 5px;
-  background: #d2483c;
+  background: #D89E5A;
   text-align: center;
   cursor: pointer;
   font-size: 19px;
@@ -32,45 +38,62 @@ h1.box-title {
   padding: 0;
   color: #fff;
   border: 0;
-  outline:0;
+  outline: 0;
 }
-.box-register
-{
-  text-align:center;
-  margin-bottom:0px;
+
+.box-register {
+  text-align: center;
+  margin-bottom: 0px;
+  font-size: 17px;
 }
-.box-register a
-{
-  text-decoration:none;
-  font-size:12px;
-  color:#666;
+
+.box-register a {
+  text-decoration: none;
+  font-size: 15px;
+  color: #666;
+  margin-left: 10px;
+  text-decoration: underline;
 }
+
 .box-input {
   font-size: 14px;
   background: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid #D89E5A;
   margin-bottom: 25px;
-  padding-left:10px;
+  padding-left: 10px;
   border-radius: 5px;
   width: 347px;
   height: 50px;
 }
+
 .box-input:focus {
-    outline: none;
-    border-color:#5c7186;
+  outline: none;
+  border-color: #5c7186;
 }
-.sucess{
-	text-align: center;
-	color: white;
+
+.sucess {
+  text-align: center;
 }
+
+.sucess *{
+  display: flex;
+  justify-content: center;
+}
+
+.sucess i{
+  font-size: 25px;
+  color: #555;
+}
+
 .sucess a {
-	text-decoration: none;
-	color: #58aef7;
+  text-decoration: none;
+  color: #58aef7;
 }
+
 p.errorMessage {
-    background-color: #e66262;
-    border: #AA4502 1px solid;
-    padding: 5px 10px;
-    color: #FFFFFF;
-    border-radius: 3px;
+  background-color: #e66262;
+  border: #AA4502 1px solid;
+  padding: 5px 10px;
+  color: #FFFFFF;
+  border-radius: 3px;
 }

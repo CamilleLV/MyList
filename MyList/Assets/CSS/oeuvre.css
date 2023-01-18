@@ -18,20 +18,28 @@ div.gauche {
 }
 
 div.gauche * {
-    margin-left: 20%;
+    margin-left: 5%;
+}
+div.gauche h2 {
+    margin-left: 30%;
 }
 
 div.gauche img {
+    margin-top: 10%;
+    margin-left: 30%;
     width:300px;
     height:411px;
 }
 
 div.gauche ul {
     list-style: none;
+    
+    margin-left: 30%;
     /* Supprime les puces des éléments de la liste */
 }
 
 div.droite {
+    margin-top: 3%;
     float: right;
     width: 50%;
     /* Largeur de la div en pourcentage de la largeur de l'écran */
@@ -78,4 +86,12 @@ div.droite * {
 
 .button-24:active {
     opacity: .5;
+}
+
+p{
+    font-size : 20px;
+}
+
+div.gauche ul li{
+    font-size : 20px;
 }

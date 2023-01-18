@@ -19,8 +19,9 @@
         <textarea name="message" required></textarea><br>
         <input class="button-24" type="submit">
     </form>-->
+    <h2>Contactez-nous ici !</h2>
     <form>
-        <input class="button" type="button" value="Nous envoyer un E-mail" onclick="window.location.href='mailto:mylistcontactpro@gmail.com@gmail.com?subject=Envoi%20depuis%20la%20page%20contact.&body=Bonjour,%20Bonsoir,'"/>
+        <input class="button" type="button" value="Nous envoyer un E-mail" onclick="window.location.href='mailto:mylistcontactpro@gmail.com?subject=Envoi%20depuis%20la%20page%20contact.&body=Bonjour,%20Bonsoir,'"/>
     </form>
     <?php 
     /*

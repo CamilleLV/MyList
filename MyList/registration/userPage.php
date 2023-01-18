@@ -13,16 +13,14 @@ if (!isset($_SESSION["username"])) {
 <head>
     <meta charset="utf-8">
     <link rel="icon" href="./Assets/Images/Logo_MyList.png" />
-    <link rel="stylesheet" type="text/css" href="./Assets/CSS/toutespages.css">
+    <link rel="stylesheet" type="text/css" href="./registration/styleReg.css">
     <title>Ma Liste | MyList</title>
 </head>
 
 <body>
 	<div class="sucess">
 		<h1>Bienvenue <?php echo $_SESSION['username']; ?>!</h1>
-		<p>C'est votre espace utilisateur.</p>
-		<a href="../index.php">Accueil</a>
-		<a href="./registration/logout.php">Déconnexion</a>
+		<i>Ceci est votre espace utilisateur.</i>
 	</div>
 
 	<section>

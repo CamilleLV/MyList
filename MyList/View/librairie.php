@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <link rel="icon" href="./Assets/Images/Logo_MyList.png" />
     <link rel="stylesheet" type="text/css" href="Assets/CSS/toutespages.css">
-    <link rel="stylesheet" type="text/css" href="Assets/CSS/librairie.css">
+    
     <!-- Swiper CSS -->
     <link rel="stylesheet" type="text/css" href="Assets/CSS/swiper-bundle.min.css">
+
+    <link rel="stylesheet" type="text/css" href="Assets/CSS/librairie.css">
 
     <title>Librairie | MyList</title>
 </head>
@@ -20,7 +22,7 @@
         <input name="action" id="button-submit" type="submit" value="Rechercher">
     </form>
 
-    <h3>Comédie</h3>
+    <h3 class="titreGenre">Comédie</h3>
     <div class="container swiper">
         <div class="slide-container">
             <div class="card-wrapper swiper-wrapper">
@@ -56,7 +58,7 @@
         <div class="swiper-pagination"></div>
     </div>
 
-    <h3>Action</h3>
+    <h3 class="titreGenre">Action</h3>
     <div class="container swiper">
         <div class="slide-container">
             <div class="card-wrapper swiper-wrapper">
@@ -92,7 +94,7 @@
         <div class="swiper-pagination"></div>
     </div>
 
-    <h3>Animation</h3>
+    <h3 class="titreGenre">Animation</h3>
     <div class="container swiper">
         <div class="slide-container">
             <div class="card-wrapper swiper-wrapper">

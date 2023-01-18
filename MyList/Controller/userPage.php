@@ -6,6 +6,7 @@ function userPage()
     $values = recupListUser();
     require("./View/header.php");
     require("./registration/userPage.php");
+    require("./View/footer.php");
 }
 
 ?>

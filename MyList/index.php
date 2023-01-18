@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 require_once('./Controller/homepage.php');
 require_once('./Controller/oeuvre.php');

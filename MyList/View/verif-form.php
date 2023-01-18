@@ -4,8 +4,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="icon" href="./Assets/Images/Logo_MyList.png" />
-    <link rel="stylesheet" type="text/css" href="./Assets/CSS/index.css">
-    <link rel="stylesheet" type="text/css" href="./Assets/CSS/commun.css">
+    <link rel="stylesheet" type="text/css" href="Assets/CSS/toutespages.css">
     <title>Recherche | MyList</title>
 </head>
 <!-- J'ai essayé de faire via un tuto, que j'ai adapter à nos infos, la balise php ci-dessous est la version de 
@@ -18,7 +17,7 @@ la branche d'adrien d'affichage et la balise encore dessous est celle du tuto. C
 
     //On affiche le ou les film(s) en question
     foreach ($recipes as $recipe) {
-            echo '<li>
+            echo '<li style=" display : inline-block;">
             <div class="films_titres_et_oeuvres" style=" width: 175px; height: 260px; border: 1px solid black; background-color: #ffff">
                 <a href="index.php?action=oeuvre&id=' . $recipe["id"] . '">
                     <div class="films_oeuvres"style="height: 80%;

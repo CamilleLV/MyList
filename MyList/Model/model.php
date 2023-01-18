@@ -137,7 +137,7 @@ function recupListUser()
 
     /*chdir("../");
     require('./registration/config.php');*/
-    session_start();
+    //session_start();
 
     if (isset($_SESSION['id_user'])) {
         $id_user = $_SESSION['id_user'];
@@ -180,7 +180,7 @@ function recupListUser()
 
 function verifIDFilm($id)
 {
-    session_start();
+    //session_start();
     $id_film = $id;
 
     if (isset($_SESSION['id_user'])) {

@@ -78,3 +78,8 @@ input[type="submit"] {
 .button:active {
     opacity: .5;
 }
+
+h2{
+    display: flex;
+    justify-content: center;
+}

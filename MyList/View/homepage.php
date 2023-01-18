@@ -19,9 +19,8 @@
     <form id="searchbox" action="index.php" method="get">
         <input name=titre type="search" size="15" placeholder="Rechercher…">
         <input name="action" id="button-submit" type="submit" value="Rechercher">
-    </form>
+    </form><br>
 
-    <h3>Tous les Films</h3>
     <div class="container swiper">
         <div class="slide-container">
             <div class="card-wrapper swiper-wrapper">
