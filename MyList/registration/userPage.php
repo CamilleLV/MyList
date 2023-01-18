@@ -29,7 +29,7 @@ if (!isset($_SESSION["username"])) {
 			<?php
 			//On affiche chaque film un par un
 			foreach ($values as $recipe) {
-				echo '<div style="">
+				echo '<div>
 						<div class="films_titres_et_oeuvres" style="width: 175px; height: 260px;">
 							<a href="index.php?action=oeuvre&id=' . $recipe["id"] . '">
 								<div class="films_oeuvres"style="height: 80%;
