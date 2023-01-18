@@ -3,8 +3,10 @@
 require_once('./Controller/homepage.php');
 require_once('./Controller/oeuvre.php');
 require_once('./Controller/librairie.php');
-require_once('./Controller/search_form.php');
-require_once('./Controller/login.php');
+require_once('./Controller/userPage.php');
+require_once('./Controller/search-form.php');
+require_once('./Controller/legalNotice.php');
+require_once('./Controller/contact.php');
 require_once('./Controller/404.php');
 
 if (isset($_GET['action']) && $_GET['action'] !== '') {
@@ -13,8 +15,9 @@ if (isset($_GET['action']) && $_GET['action'] !== '') {
 			$identifier = $_GET['id'];
 			oeuvre($identifier);
 		} else {
-			//erreur : id oeuvre incorecte
-			not_found();
+			echo 'Erreur : aucun identifiant';
+
+			die;
 		}
 	} elseif ($_GET['action'] === 'search') {
 		/*$_GET['titre'] = htmlspecialchars($_GET['titre']); //pour sécuriser le formulaire contre les failles html
@@ -35,9 +38,13 @@ if (isset($_GET['action']) && $_GET['action'] !== '') {
 		}*/
 	} elseif ($_GET['action'] === 'librairie') {
 		library();
-	} elseif ($_GET['action'] === 'login') {
-		login();
-	} else {
+	} elseif ($_GET['action'] === 'userPage') {
+		userPage();
+	} elseif ($_GET['action'] === 'contact') {
+		contact();
+	} elseif ($_GET['action'] === 'mentionsLegales') {
+		legalNotice();
+	}  else {
 		//echo "Erreur 404 : la page que vous recherchez n'existe pas.";
 		not_found();
 	}

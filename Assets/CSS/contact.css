@@ -1,0 +1,80 @@
+form {
+    width: 50%;
+    /* la largeur du formulaire est de 50% de la largeur de la page */
+    margin: 0 auto;
+    /* les marges gauche et droite sont automatiquement ajustées pour centrer le formulaire */
+    text-align: center;
+    /* aligne le texte du formulaire au centre */
+}
+
+label {
+    display: block;
+    /* fait passer chaque étiquette sur une nouvelle ligne */
+    margin-bottom: 0.5em;
+    /* ajoute un espace entre chaque étiquette et le champ de saisie */
+    font-weight: bold;
+    /* met en gras le texte des étiquettes */
+}
+
+input[type="email"],
+textarea {
+    width: 100%;
+    /* fait en sorte que les champs de saisie occupent toute la largeur disponible */
+    box-sizing: border-box;
+    /* ajuste la largeur des bordures et des marges en fonction de la largeur des champs de saisie */
+    padding: 0.5em;
+    /* ajoute un peu de marge intérieure aux champs de saisie */
+    border: 1px solid #ccc;
+    /* ajoute une bordure grise autour des champs de saisie */
+    border-radius: 4px;
+    /* arrondit les coins de la bordure */
+}
+
+input[type="submit"] {
+    display: block;
+    /* fait passer le bouton sur une nouvelle ligne */
+    margin: 1em auto;
+    /* centre le bouton et ajoute de l'espace en haut et en bas */
+    padding: 0.5em 1em;
+    /* ajoute de la marge intérieure et extérieure au bouton */
+}
+
+.button {
+    margin: 1em auto;
+    /* centre le bouton et ajoute de l'espace en haut et en bas */
+    padding: 0.5em 1em;
+    /* ajoute de la marge intérieure et extérieure au bouton */
+    background: #7B562B;
+    border: 1px solid #7B562B;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #D89E5A;
+    cursor: pointer;
+    display: inline-block;
+    font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+}
+
+.button:hover,
+.button:active {
+    background-color: initial;
+    background-position: 0 0;
+    color: #7B562B;
+}
+
+.button:active {
+    opacity: .5;
+}

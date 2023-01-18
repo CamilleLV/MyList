@@ -2,8 +2,9 @@
     require_once("Model/model.php");
 
     function homepage() {
-        $recipes = getRecipes();
+        $recipes = getLessRecipes();
         require("View/header.php");
         require("View/homepage.php");
+        require("View/footer.php");
     }
 ?>

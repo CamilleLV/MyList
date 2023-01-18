@@ -5,6 +5,6 @@
     * verif-form toutes les valeurs intégrant la recherche */) {
         $recipes = getOneRecipe($terme); //Nouvelle fonction dans Model.php
         require("View/header.php");
-        require("View/search_form.php");
+        require("View/verif-form.php");
     }
 ?>

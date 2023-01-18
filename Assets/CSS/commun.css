@@ -62,7 +62,8 @@ footer {
   }
 
 /**
- * Partie de la barre de recherche */
+ * Partie de la barre de recherche 
+ */
 
  #searchbox {
   background: #d8d8d8;
@@ -122,3 +123,5 @@ input:focus::-moz-placeholder {
 #button-submit::-moz-focus-inner {
   border: 0;
 }
+
+/* Fin de la Barre de Recherche */

@@ -15,7 +15,8 @@ la branche d'adrien d'affichage et la balise encore dessous est celle du tuto. C
 <body>
     <h3>Résultats correspondant à la recherche "<?php echo $terme;?>" : </h3>
     <?php
-    //On affiche le film en question
+
+    //On affiche le ou les film(s) en question
     foreach ($recipes as $recipe) {
             echo '<li>
             <div class="films_titres_et_oeuvres" style=" width: 175px; height: 260px; border: 1px solid black; background-color: #ffff">
