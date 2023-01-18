@@ -1,66 +1,73 @@
 <?php 
 
-// Connexion à la base de donnée
-require('config.php');
-session_start();
-
 // Récupère en enlevant tout les espaces en début et fin de chaîne ainsi que les antislashs
-$titre = trim(stripslashes($_GET['titre']));
+$titre = trim(stripslashes($_POST['titre']));
 $titre = mysqli_real_escape_string($conn, $titre);
 
-$auteur = trim(stripslashes($_GET['auteur']));
+$auteur = trim(stripslashes($_POST['auteur']));
 $auteur = mysqli_real_escape_string($conn, $auteur);
 
-$acteur1 = trim(stripslashes($_GET['acteur1']));
+$acteur1 = trim(stripslashes($_POST['acteur1']));
 $acteur1 = mysqli_real_escape_string($conn, $acteur1);
 
-$acteur2 = trim(stripslashes($_GET['acteur2']));
+$acteur2 = trim(stripslashes($_POST['acteur2']));
 $acteur2 = mysqli_real_escape_string($conn, $acteur2);
 
-$acteur3 = trim(stripslashes($_GET['acteur3']));
+$acteur3 = trim(stripslashes($_POST['acteur3']));
 $acteur3 = mysqli_real_escape_string($conn, $acteur3);
 
-$date = trim(stripslashes($_GET['date']));
+$date = trim(stripslashes($_POST['date']));
 $date = mysqli_real_escape_string($conn, $date);
 
-$duree = trim(stripslashes($_GET['duree']));
+$duree = trim(stripslashes($_POST['duree']));
 $duree = mysqli_real_escape_string($conn, $duree);
 
-$tag1 = trim(stripslashes($_GET['tag1']));
+$tag1 = trim(stripslashes($_POST['tag1']));
 $tag1 = mysqli_real_escape_string($conn, $tag1);
 
-$tag2 = trim(stripslashes($_GET['tag2']));
+$tag2 = trim(stripslashes($_POST['tag2']));
 $tag2 = mysqli_real_escape_string($conn, $tag2);
 
-$tag3 = trim(stripslashes($_GET['tag3']));
+$tag3 = trim(stripslashes($_POST['tag3']));
 $tag3 = mysqli_real_escape_string($conn, $tag3);
 
-$photo = trim(stripslashes($_GET['photo']));
-$photo = mysqli_real_escape_string($conn, $photo);
 
-$description = trim(stripslashes($_GET['description']));
+if(isset($_FILES['image'])){
+    // Tableau qui contiendra les messages d'erreurs s'il y en a
+    $errors= array();
+    // Contient le nom original du fichier image, la taille (en octets), le nom temporaire et le type (ex : jpeg)
+    $file_name = $_FILES['image']['name'];
+    $file_size = $_FILES['image']['size'];
+    $file_tmp = $_FILES['image']['tmp_name'];
+    $file_type = $_FILES['image']['type'];
+    // Contient l'extension de l'image
+    $file_ext = strtolower(end(explode('.',$_FILES['image']['name'])));
+    $expensions = array("jpeg","jpg","png");
+    
+    if(in_array($file_ext,$expensions) === false){
+       $errors[]="Extension non autorisée, veuillez choisir un fichier JPEG ou PNG.";
+    }
+    
+    if($file_size > 2097152) {
+       $errors[]="La taille du fichier ne doit pas dépasser 2 Mo.";
+    }
+    
+    if(empty($errors) == true) {
+       move_uploaded_file($file_tmp,"../Assets/Image_film/".$file_name);
+
+       $photo = "Assets/Image_film/".$file_name;
+       $photo = trim(stripslashes($photo));
+       $photo = mysqli_real_escape_string($conn, $photo);
+       //echo "Ajouté avec succès";
+    }else{
+       print_r($errors);
+    }
+ }
+
+$description = trim(stripslashes($_POST['description']));
 $description = mysqli_real_escape_string($conn, $description);
 
-$query = "INSERT INTO films(title, realisateur, acteur_1, acteur_2, acteur_3, date_sortie, duree, genre_1, genre_2, genre_3, url_img, synopsis) VALUES(:titre, :auteur, :acteur1, :acteur2, :acteur3, :date, :duree, :tag1, :tag2, :tag3, :photo, :description)";
-
-$stmt = $conn->prepare($query);
-$stmt->bindParam(':titre', $titre);
-$stmt->bindParam(':auteur', $auteur);
-$stmt->bindParam(':acteur1', $acteur1);
-$stmt->bindParam(':acteur2', $acteur2);
-$stmt->bindParam(':acteur3', $acteur3);
-$stmt->bindParam(':date', $date);
-$stmt->bindParam(':duree', $duree);
-$stmt->bindParam(':tag1', $tag1);
-$stmt->bindParam(':tag2', $tag2);
-$stmt->bindParam(':tag3', $tag3);
-$stmt->bindParam(':photo', $photo);
-$stmt->bindParam(':description', $description);
-
-$stmt->execute();
-
-$conn = null;
-exit;
+require('../Model/suggerer_oeuvre.php');
 
 ?>
 
