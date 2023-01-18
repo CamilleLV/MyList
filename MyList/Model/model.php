@@ -145,8 +145,9 @@ function recupListUser()
         $user = 'root';
         $passworld = '';
         $mysqlClient = new PDO($host, $user, $passworld);
-        $query = "SELECT * FROM films, film_liker WHERE film_liker.id = films.id";
+        $query = "SELECT * FROM films, film_liker WHERE film_liker.id = films.id AND film_liker.id_user = :user_id";
         $stmt = $mysqlClient->prepare($query);
+        $stmt->bindParam(":user_id", $id_user);
         $stmt->execute();
         //echo "true";
 

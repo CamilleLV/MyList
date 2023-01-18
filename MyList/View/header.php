@@ -9,7 +9,8 @@
         <ul style="padding:0;">
             <li>
                 <h1><a href="index.php?action=librairie">Librairie</a></h1>
-                <h1><a href="suggerer_oeuvre.html">Suggérer une oeuvre</a></h1>
+                <h1><a href="index.php?action=sugOeuvre">Suggérer une oeuvre</a></h1>
+                <h1><a href="index.php?action=recommandation">Recommandation</a></h1>
                 <?php
                 // Initialiser la session
                 //session_start();
