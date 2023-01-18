@@ -9,7 +9,7 @@ require('config.php');
 session_start();
 
 if (isset($_POST['username'])){
-	$username = stripslashes($_REQUEST['username']);
+	$username = trim(stripslashes($_REQUEST['username']));
 	$username = mysqli_real_escape_string($conn, $username);
 	$_SESSION['username'] = $username;
 	$password = stripslashes($_REQUEST['password']);
