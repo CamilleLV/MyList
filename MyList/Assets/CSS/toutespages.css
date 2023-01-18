@@ -139,3 +139,10 @@ header a:visited,
 footer a:visited {
     color: black;
 }
+
+.films_titres{
+    outline : none; 
+    text-decoration: none; 
+    font-size: 18px; 
+    color: #D89E5A;
+}

@@ -23,7 +23,7 @@ la branche d'adrien d'affichage et la balise encore dessous est celle du tuto. C
                                 <div class="films_oeuvres"style="height: 80%;
                                 width: 100%;background-image: url(' . $recipe["url_img"] . '); background-position: center; background-size: 175px 200px;">
                                 </div>
-                                <h5 class="films_titres"style=" font-size: 10px">' . $recipe["title"] . '</h5>
+                                <h5 class="films_titres">' . $recipe["title"] . '</h5>
                             </a>
                         </div>
                     </div>';

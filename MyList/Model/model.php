@@ -105,7 +105,7 @@ function getOneRecipe($terme): array
     return $recipe;
 }
 
-function recommandationTag($tags_reference)
+/*function recommandationTag($tags_reference)
 {
     try {
         // On se connecte à MySQL
@@ -129,7 +129,7 @@ function recommandationTag($tags_reference)
 
     return $recipe;
 
-}
+}*/
 
 
 function recupListUser()
