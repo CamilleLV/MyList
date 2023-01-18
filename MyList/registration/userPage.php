@@ -25,24 +25,22 @@ if (!isset($_SESSION["username"])) {
 		<a href="./registration/logout.php">Déconnexion</a>
 	</div>
 
-	<section>
-		<ul class="carousel">
+	<section style=" display : grid; grid-template-columns: repeat(5, 1fr); grid-gap: 20px;">
 			<?php
 			//On affiche chaque film un par un
 			foreach ($values as $recipe) {
-				echo '<li style=" display : inline-block; padding : 1%;">
-						<div class="films_titres_et_oeuvres" style=" width: 175px; height: 260px;">
+				echo '<div style="">
+						<div class="films_titres_et_oeuvres" style="width: 175px; height: 260px;">
 							<a href="index.php?action=oeuvre&id=' . $recipe["id"] . '">
 								<div class="films_oeuvres"style="height: 80%;
 								width: 100%;background-image: url(' . $recipe["url_img"] . '); background-position: center; background-size: 175px 200px;">
 								</div>
-								<h5 class="films_titres"style=" height : 20px; font-size: 20px">' . $recipe["title"] . '</h5>
+								<h5 class="films_titres"style=" height : 0px; font-size: 20px">' . $recipe["title"] . '</h5>
 							</a>
 						</div>
-						</li>';
+					</div>';
 			}
 			?>
-		</ul>
 	</section>
 </body>
 
