@@ -8,7 +8,7 @@ require_once('./Controller/userPage.php');
 require_once('./Controller/search-form.php');
 require_once('./Controller/legalNotice.php');
 require_once('./Controller/recommandation.php');
-require_once('./Controller/sugger_oeuvre.php');
+require_once('./Controller/suggerer_oeuvre.php');
 require_once('./Controller/contact.php');
 require_once('./Controller/404.php');
 
