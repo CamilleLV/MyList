@@ -7,7 +7,7 @@ require_once('./Controller/librairie.php');
 require_once('./Controller/userPage.php');
 require_once('./Controller/search-form.php');
 require_once('./Controller/legalNotice.php');
-//require_once('./Controller/recommandation.php');
+require_once('./Controller/recommandation.php');
 require_once('./Controller/sugger_oeuvre.php');
 require_once('./Controller/contact.php');
 require_once('./Controller/404.php');
@@ -47,9 +47,9 @@ if (isset($_GET['action']) && $_GET['action'] !== '') {
 		contact();
 	} elseif ($_GET['action'] === 'mentionsLegales') {
 		legalNotice();
-	} /*elseif ($_GET['action'] === 'recommandation') {
+	} elseif ($_GET['action'] === 'recommandation') {
 		recommandation();
-	}*/ elseif ($_GET['action'] === 'sugOeuvre') {
+	} elseif ($_GET['action'] === 'sugOeuvre') {
 		sugOeuvre();
 	}else {
 		//echo "Erreur 404 : la page que vous recherchez n'existe pas.";

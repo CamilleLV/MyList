@@ -105,31 +105,45 @@ function getOneRecipe($terme): array
     return $recipe;
 }
 
-/*function recommandationTag($tags_reference)
-{
-    try {
-        // On se connecte à MySQL
+function recommandationTag()
+{   
+    if (isset($_SESSION['id_user'])) {
+        $id_user = $_SESSION['id_user'];
         $host = 'mysql:host=localhost;dbname=sae;charset=utf8';
         $user = 'root';
         $passworld = '';
         $mysqlClient = new PDO($host, $user, $passworld);
-    } catch (Exception $e) {
-        // En cas d'erreur, on affiche un message et on arrête tout
-        die('Erreur : ' . $e->getMessage());
+        
+        $stmt = $mysqlClient->prepare("SELECT genre_1 as genre, COUNT(*) as nb_films
+        FROM films
+        JOIN film_liker ON films.id = film_liker.id
+        WHERE film_liker.id_user = :id_user
+        GROUP BY genre_1
+        ORDER BY nb_films DESC
+        LIMIT 1");
+        $stmt->bindValue(':id_user', $id_user, PDO::PARAM_INT);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        $stmt = $mysqlClient->prepare("SELECT AVG(note_spectateurs) as avg_note
+        FROM films
+        JOIN film_liker ON films.id = film_liker.id
+        WHERE film_liker.id_user = :id_user");
+        $stmt->bindValue(':id_user', $id_user, PDO::PARAM_INT);
+        $stmt->execute();
+        $moyenne = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        $sqlQuery = 'SELECT * FROM films WHERE genre_1 = :genre and note_spectateurs > :moyenne AND id NOT IN (SELECT id FROM film_liker WHERE id_user = :id_user) ORDER BY RAND() LIMIT 25';
+        $recipesStatement = $mysqlClient->prepare($sqlQuery);
+        $recipesStatement->bindValue(':genre', $result['genre'], PDO::PARAM_STR);
+        $recipesStatement->bindValue(':moyenne', $moyenne, PDO::PARAM_INT);
+        $recipesStatement->bindValue(':id_user', $id_user, PDO::PARAM_INT);
+        $recipesStatement->execute();
+        $recipes = $recipesStatement->fetchAll(PDO::FETCH_ASSOC);
+
+        return $recipes;
     }
-    // Si tout va bien, on peut continuer
-
-    // On récupère tout le contenu de la table recipes
-    $sqlQuery = "SELECT * FROM films WHERE genre_1 or genre_2 or genre_3 LIKE :tags";
-    $recipesStatement = $mysqlClient->prepare($sqlQuery);
-    // Étape 4 : lier les paramètres de la requête à leurs valeurs
-    $recipesStatement->bindParam(":tags", $tags_reference);
-    $recipesStatement->execute();
-    $recipe = $recipesStatement->fetchAll();
-
-    return $recipe;
-
-}*/
+}
 
 
 function recupListUser()
